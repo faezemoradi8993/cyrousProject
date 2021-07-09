@@ -4,7 +4,9 @@ import './wallet.css'
 const Wallet = () => {
   return (
     <Layout>
-      wallet
+         <div className="mainContainer">
+        <p className="title"> wallet  </p>
+      </div>
     </Layout>
   )
 }

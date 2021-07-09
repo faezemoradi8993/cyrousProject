@@ -6,7 +6,8 @@
   padding: 30px 0;
   height: 100%;
   min-width: 200px;
-  height: calc(100vh - 100px);
+  box-sizing: border-box;
+  /* height: calc(100vh - 100px); */
   display: flex;
   min-height: 540px;
   margin-bottom: 20px;
@@ -30,14 +31,14 @@
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  padding: 0!important;
+  padding: 0 !important;
   width: 100%;
 }
 .sidebar .navbar ul li {
   font-size: 17px;
   padding-left: 20px;
   font-weight: 600;
-  margin:10px 0;
+  margin: 10px 0;
 }
 .sidebar .navbar ul li a {
   text-decoration: none;
@@ -50,9 +51,10 @@
   border-bottom-left-radius: 15px;
   display: flex;
   align-items: center;
-
 }
-.sidebar .navbar ul li a span{ margin-right: 6px;}
+.sidebar .navbar ul li a span {
+  margin-right: 6px;
+}
 .sidebar .navbar ul li a.activelink {
   color: #3c4572;
   background-color: #e9ecfb;
@@ -63,4 +65,9 @@
   position: relative;
   top: 5px;
   margin-right: 5px;
+}
+@media screen and (max-width: 786px) {
+  .sidebar {
+    display: none;
+  }
 }

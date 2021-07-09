@@ -5,7 +5,7 @@ const ContactUs = () => {
   return (
     <Layout>
       <div className="mainContainer">
-        <p className="title">Genealogy</p>
+        <p className="title">Contact Us</p>
       </div>
     </Layout>
   )

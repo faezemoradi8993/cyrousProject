@@ -6,11 +6,12 @@ p.title {
   color: #3c4572;
   font-weight: 600;
   margin: 20px;
+ 
 }
 .mainContent {
   border-radius: 20px;
   background-color: #d1d6ef;
-  padding:36px 20px;
+  padding: 36px 20px;
   box-shadow: -7px -7px 12px 0 rgba(0, 0, 0, 0.16);
   margin-right: 20px;
 }
@@ -79,7 +80,8 @@ p.title {
 .textContainer .caption {
   border-radius: 22px;
   /*box-shadow: -7px -7px 12px 0 rgb(0 0 0 / 16%);
-  */padding: 1px 112px 1px 20px;
+  */
+  padding: 1px 112px 1px 20px;
   background-color: #d1d6ef;
   line-height: 30px;
   border-radius: 22px;
@@ -90,15 +92,14 @@ p.title {
   -ms-border-radius: 22px;
   -o-border-radius: 22px;
 }
-.textContainer .caption p , .textContainer .caption span{
+.textContainer .caption p,
+.textContainer .caption span {
   color: #3c4572;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.98px;
-
 }
-.textContainer .caption p{
-
+.textContainer .caption p {
 }
 .textContainer .circleTitle {
   position: absolute;
@@ -128,13 +129,10 @@ p.title {
   text-transform: uppercase;
 }
 .textContainer .circleTitle p:first-child {
-
-font-size: 22px;
-font-weight: 600;
-margin-top: 4px;
-
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 4px;
 }
 .textContainer .circleTitle p:last-child {
-margin-top: 2px;
-  
-  }
+  margin-top: 2px;
+}

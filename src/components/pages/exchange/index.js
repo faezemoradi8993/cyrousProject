@@ -3,8 +3,12 @@ import Layout from '../../common/layout'
 import './exchange.css'
 const Exchange = () => {
   return (
+
     <Layout>
-      exchange
+      <div className="mainContainer">
+        <p className="title"> exchange  </p>
+      </div>
+
     </Layout>
   )
 }

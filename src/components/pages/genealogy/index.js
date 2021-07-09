@@ -16,7 +16,7 @@ const Genealogy = () => {
   };
   return (
     <Layout>
-      <div className="genealogy">
+      <div className="mainContainer">
         <p className="title">Genealogy</p>
         <div className="mainContent">
           <div className="title-header">

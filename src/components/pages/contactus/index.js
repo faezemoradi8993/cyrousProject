@@ -4,8 +4,8 @@ import './contactus.css'
 const ContactUs = () => {
   return (
     <Layout>
-      <div className="">
-
+      <div className="mainContainer">
+        <p className="title">Genealogy</p>
       </div>
     </Layout>
   )

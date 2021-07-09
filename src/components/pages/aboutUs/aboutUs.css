@@ -1,0 +1,52 @@
+.aboutus {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.horizentalTitle {
+  letter-spacing: 21px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  text-orientation: sideways;
+  -webkit-text-orientation: sideways;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  color: #3c4572;
+  font-weight: 900;
+  opacity: 0.33;
+  margin-right: -26px;
+  line-height: 7px;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+.aboutContent {
+  position: relative;
+  box-shadow: -14px -14px 25px 0 rgba(0, 0, 0, 0.16);
+  background-color: #b0b5ce;
+  border-radius: 50px 0 0 0;
+  -webkit-border-radius: 50px 0 0 0;
+  -moz-border-radius: 50px 0 0 0;
+  -ms-border-radius: 50px 0 0 0;
+  -o-border-radius: 50px 0 0 0;
+  width: 70%;
+  margin: 20px;
+  padding: 17px 30px;
+}
+.aboutContent p {
+  line-height: 26px;
+  text-shadow: #3c4572;
+}
+.aboutImage {
+  position: absolute;
+  bottom: -159px;
+  right: -19px;
+}
+.aboutImage img {
+  width: 185px;
+  object-fit: cover;
+}

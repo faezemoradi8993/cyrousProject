@@ -1,0 +1,6 @@
+.mainButton{
+  outline: none;
+  color:var(--button-color-2) ;
+  background-color: var(--primery-color);
+  border-radius: 42px;
+}

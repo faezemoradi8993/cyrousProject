@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Microsoft YaHei";
+   src: url("./assets/fonts/Microsoft\ YaHei.eot");
+   src: url("./assets/fonts/Microsoft\ YaHei.eot") format("embedded-opentype"),
+    url("./assets/fonts/Microsoft\ YaHei.woff2") format("woff2"),
+     url("./assets/fonts/Microsoft\ YaHei.woff") format("woff"),
+      url("./assets/fonts/Microsoft\ YaHei.ttf") format("truetype");}
+
+
+body {
+  margin: 0;
+  font-family:"Microsoft YaHei";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+:root{
+  --button-color:#e9e9e9;
+  --button-color-2:#cecece;
+  --primery-color:#3c4572;
+  --secondry-color:#5563a7;
+  --box-color :rgba(194, 200, 232, 0.6);
+  --back-color:  #e9ecfb;
+
+}

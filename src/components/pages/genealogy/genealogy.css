@@ -1,0 +1,121 @@
+.genealogy {
+  width: 85%;
+}
+p.title {
+  font-size: 30px;
+  color: #3c4572;
+  font-weight: 600;
+}
+.mainContent {
+  border-radius: 20px;
+  background-color: #d1d6ef;
+  padding: 20px;
+  box-shadow: -7px -7px 12px 0 rgba(0, 0, 0, 0.16);
+  margin-right: 20px;
+}
+.title-header,
+.body-content {
+  display: flex;
+  justify-content: space-around;
+}
+.body-content {
+  background-color: #e9ecfb;
+  height: 40px;
+  border-radius: 10px;
+  line-height: 40px;
+  margin: 10px 0;
+}
+.body-content span {
+  color: #3c4572;
+}
+.body-content span a {
+  color: #3c4572;
+  text-decoration: none;
+}
+.body-content span,
+.title-header span {
+  text-align: left;
+  width: 27%;
+  font-size: 16px;
+  font-weight: 600;
+}
+.title-header span:first-child,
+.body-content span:first-child {
+  text-indent: 20px;
+  width: 10%;
+}
+.title-header span:not(:first-child) {
+  color: #7b7b7b;
+}
+.title-header span:first-child {
+  color: #3c4572;
+}
+.body-content span:last-child,
+.title-header span:last-child {
+  width: 10%;
+}
+.body-content span svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: red;
+  position: relative;
+  cursor: pointer;
+  top: 10px;
+}
+.textContainer {
+  position: relative;
+  margin-top: 25px;
+  padding: 20px 0;
+  box-sizing: border-box;
+  width: calc(100% - 20px);
+  right: 0px;
+}
+.textContainer .caption {
+  border-radius: 22px;
+  /* box-shadow: -7px -7px 12px 0 rgb(0 0 0 / 16%); */
+  padding: 1px 112px 1px 20px;
+    background-color: #d1d6ef;
+    line-height: 30px;
+   border-radius: 22px;
+    box-shadow: -14px -14px 25px 0 rgba(0, 0, 0, 0.16);
+    background-color: #d1d6ef;
+
+}
+.textContainer .caption p , .textContainer .caption span{
+  color: #3c4572;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.98px;
+
+}
+.textContainer .caption p{
+
+}
+.textContainer .circleTitle {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  background-color: #b0b5ce;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.textContainer .circleTitle p {
+  white-space: nowrap;
+  line-height: 0px;
+  color: #3c4572;
+  font-size: 10px;
+  font-weight: 600;
+}
+.textContainer .circleTitle p:first-child {
+
+font-size: 25px;
+font-weight: 600;
+}

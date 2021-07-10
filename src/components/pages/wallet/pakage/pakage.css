@@ -1,0 +1,105 @@
+.pakage {
+  box-shadow: 7px 5px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #e9e9e9;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+  margin: 20px;
+}
+.pakage .header {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.pakage .header .top {
+  position: absolute;
+
+  font-size: 17px;
+}
+.pakage .header .top * {
+  margin: 0;
+  padding: 0;
+}
+.pakage .header .top h3 {
+}
+.pakage .header .top h2 {
+  letter-spacing: 3px;
+  font-size: 30px;
+  font-weight: bolder;
+  position: relative;
+}
+.pakage .header .top h2 span {
+  position: absolute;
+  top: 10px;
+  padding-left: 5px;
+  font-size: 14px;
+  letter-spacing: 0px;
+}
+.pakage .header .top .cut {
+}
+.pakage .header .buttom {
+  position: absolute;
+  width: 80px;
+  height: 100px;
+  right: 0px;
+  bottom: 20px;
+}
+.pakage .header .buttom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pakage .header:before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 148%;
+  bottom: 36%;
+  left: -55px;
+  background-color: yellow;
+  transform: rotate(59deg);
+  -webkit-transform: rotate(59deg);
+  -moz-transform: rotate(59deg);
+  -ms-transform: rotate(59deg);
+  -o-transform: rotate(59deg);
+}
+.pakage .divider {
+  height: 3px;
+  width: 90%;
+
+  margin: 0 auto;
+}
+.pakage .content h5 {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 5px;
+  font-weight: 600;
+}
+.pakage .content h5:last-child {
+  padding-left: 25px;
+}
+.pakage .content h5 span {
+  color: #1db800 !important;
+  font-size: 14px;
+  margin-left: 8px;
+}
+.pakage .content {
+  margin: 30px auto;
+}
+.pakage .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pakage .btn button {
+  padding-right: 55px !important ;
+  padding-left: 55px !important;
+}

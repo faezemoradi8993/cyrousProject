@@ -1,6 +1,16 @@
-.mainButton{
+.mainButton {
   outline: none;
-  color:var(--button-color-2) ;
+  color: var(--button-color-2);
   background-color: var(--primery-color);
-  border-radius: 42px;
+  border-radius: 38px;
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+  -webkit-border-radius: 38px;
+  -moz-border-radius: 38px;
+  -ms-border-radius: 38px;
+  -o-border-radius: 38px;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 1px;
 }

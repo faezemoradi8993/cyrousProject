@@ -1,6 +1,10 @@
 .aboutus {
   display: flex;
   justify-content: flex-end;
+  margin-top: -76px;
+}
+p.title.about {
+  text-transform: uppercase;
 }
 
 .horizentalTitle {
@@ -25,11 +29,10 @@
 }
 
 .aboutContent {
-  position: relative;
-  box-shadow: -14px -14px 25px 0 rgba(0, 0, 0, 0.16);
+   box-shadow: -14px -14px 25px 0 rgba(0, 0, 0, 0.16);
   background-color: #b0b5ce;
   border-radius: 50px 0 0 0;
-  -webkit-border-radius: 50px 0 0 0;
+  -webkit-border-radius: 100px 0 0 0;
   -moz-border-radius: 50px 0 0 0;
   -ms-border-radius: 50px 0 0 0;
   -o-border-radius: 50px 0 0 0;
@@ -42,9 +45,10 @@
   text-shadow: #3c4572;
 }
 .aboutImage {
-  position: absolute;
-  bottom: -159px;
-  right: -19px;
+    margin-top: -50px;
+    display: flex;
+    margin-right: 20px;
+    justify-content: flex-end;
 }
 .aboutImage img {
   width: 185px;

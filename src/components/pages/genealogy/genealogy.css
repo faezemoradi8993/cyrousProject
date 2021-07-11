@@ -4,6 +4,9 @@ p.title {
   font-weight: 600;
   margin: 20px;
 }
+.mainContainer{
+  flex-basis: 100%;
+}
 .mainContent {
   border-radius: 20px;
   background-color: #d1d6ef;

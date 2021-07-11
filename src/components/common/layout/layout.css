@@ -11,11 +11,17 @@
   position: -webkit-sticky;
   position: sticky;
   top: 20px;
-  min-height: unset !important;
+  min-height: calc(100vh - 40px) !important;
 }
 @media screen and (max-width: 786px) {
   .container {
     width: 100%;
+  }
+  .layoutContainer .sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    min-height: fit-content !important;
   }
 }
 .contents {

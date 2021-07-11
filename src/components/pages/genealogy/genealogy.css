@@ -1,12 +1,8 @@
-.mainContainer {
-  width: 85%;
-}
 p.title {
   font-size: 40px;
   color: #3c4572;
   font-weight: 600;
   margin: 20px;
- 
 }
 .mainContent {
   border-radius: 20px;
@@ -15,6 +11,7 @@ p.title {
   box-shadow: -7px -7px 12px 0 rgba(0, 0, 0, 0.16);
   margin-right: 20px;
 }
+
 .title-header,
 .body-content {
   display: flex;
@@ -72,6 +69,7 @@ p.title {
 .textContainer {
   position: relative;
   margin-top: 25px;
+  margin-bottom: 25px;
   padding: 20px 0;
   box-sizing: border-box;
   width: calc(100% - 20px);
@@ -118,6 +116,10 @@ p.title {
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .textContainer .circleTitle p {
@@ -135,4 +137,30 @@ p.title {
 }
 .textContainer .circleTitle p:last-child {
   margin-top: 2px;
+}
+@media screen and (max-width: 786px) {
+  .mainContent {
+    margin: 0 20px !important;
+  }
+  .mainContent.wallet {
+    margin-top: 70px !important;
+  }
+  p.title {
+    margin-top: 60px;
+  }
+  .textContainer {
+    margin-left: 20px;
+    width: calc(100% - 40px);
+  }
+  .body-content span a {
+    margin-right: 50px;
+  }
+  .title-header span:nth-child(4),
+  .body-content span:nth-child(4) {
+    position: relative;
+    left: 20px;
+  }
+  .body-content span svg {
+    left: 10px;
+  }
 }

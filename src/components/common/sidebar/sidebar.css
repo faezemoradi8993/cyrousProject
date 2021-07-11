@@ -1,22 +1,26 @@
 .sidebar {
-  background-color: var(--box-color);
-  width: 15%;
-  margin: 20px 40px 0 20px;
+  background-color: rgba(194, 200, 232, 0.72);
+  width: 100%;
   border-radius: 20px;
   padding: 30px 0;
-  height: 100%;
-  min-width: 200px;
   box-sizing: border-box;
-  /* height: calc(100vh - 100px); */
+  /*height: calc(100vh - 100px);
+  */
   display: flex;
   min-height: 540px;
-  margin-bottom: 20px;
-  justify-content: space-around;
+  height: fit-content;
+  margin: 20px;
+  justify-content: center;
+  transition: all 0.3s ease;
   flex-direction: column;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 .sidebar .navbar {
   height: 90%;
@@ -46,7 +50,7 @@
   color: #b2b7d2;
   display: inline-block;
   width: 100%;
-  padding: 6px 0 6px 10px;
+  padding: 6px 10px 6px 10px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   display: flex;
@@ -66,8 +70,25 @@
   top: 5px;
   margin-right: 5px;
 }
-@media screen and (max-width: 786px) {
+.mobile-menu svg {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  z-index: 3;
+}
+@media (min-width: 768px) {
   .sidebar {
-    display: none;
+    width: 25%;
+    margin-right: 20px;
+    max-width: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    margin: 0;
+    width: 100%;
+    padding: 28px 0 30px 0px;
   }
 }

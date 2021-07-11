@@ -1,7 +1,11 @@
 .aboutus {
   display: flex;
   justify-content: flex-end;
-  margin-top: -76px;
+}
+@media only screen and (max-width: 768px) {
+  .aboutus {
+    justify-content: center;
+  }
 }
 p.title.about {
   text-transform: uppercase;
@@ -29,7 +33,7 @@ p.title.about {
 }
 
 .aboutContent {
-   box-shadow: -14px -14px 25px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: -14px -14px 25px 0 rgba(0, 0, 0, 0.16);
   background-color: #b0b5ce;
   border-radius: 50px 0 0 0;
   -webkit-border-radius: 100px 0 0 0;
@@ -39,16 +43,18 @@ p.title.about {
   width: 70%;
   margin: 20px;
   padding: 17px 30px;
+  margin-top: -15px;
 }
 .aboutContent p {
   line-height: 26px;
   text-shadow: #3c4572;
 }
 .aboutImage {
-    margin-top: -50px;
-    display: flex;
-    margin-right: 20px;
-    justify-content: flex-end;
+  margin-top: -50px;
+  display: flex;
+  margin-right: 20px;
+  justify-content: flex-end;
+  margin-bottom: 20px;
 }
 .aboutImage img {
   width: 185px;

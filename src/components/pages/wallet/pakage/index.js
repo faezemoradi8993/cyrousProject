@@ -2,8 +2,8 @@ import React from 'react'
 import "./pakage.css"
 import CheckIcon from '@material-ui/icons/Check';
 import MainButton from '../../../common/button'
-// import image from "../../../../assets/package-1.png"
-const Pakage = ({ backcolor, maincolor, name, month, image, p1, p2, p3 }) => {
+import image from "../../../../assets/package-1.png"
+const Pakage = ({ backcolor, maincolor, name, month, p1, p2, p3 }) => {
 
     return (
 
@@ -19,7 +19,7 @@ const Pakage = ({ backcolor, maincolor, name, month, image, p1, p2, p3 }) => {
                     <img src={image} alt="packageImage" />
                 </div>
             </div>
-            <div className="divider" style={{ backgroundColor: { maincolor } }}></div>
+            <div className="divider" style={{ backgroundColor: `${maincolor}` }}></div>
             <div className="content" style={{ color: { maincolor } }}>
                 <h5 style={{ color: `${maincolor}` }}><CheckIcon />Profit <span>{p1}</span></h5>
                 <h5 style={{ color: `${maincolor}` }}><CheckIcon />COMISSION <span>{p2}</span></h5>

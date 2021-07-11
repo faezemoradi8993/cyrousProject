@@ -1,0 +1,208 @@
+.contactus {
+  display: flex;
+}
+
+.contactus .info {
+  padding: 50px 50px;
+  border-radius: 30px 0 0 30px;
+  -webkit-border-radius: 30px 0 0 30px;
+  -moz-border-radius: 30px 0 0 30px;
+  -ms-border-radius: 30px 0 0 30px;
+  -o-border-radius: 30px 0 0 30px;
+  background-color: #3c4572;
+  color: #dcdcdc;
+  margin: -40px 0px 70px 20px;
+  flex: 1;
+}
+.contactus .info * {
+  box-sizing: border-box;
+}
+.contactus .info h2 {
+  margin-bottom: 45px;
+}
+.contactus .info p {
+  letter-spacing: 1.72px;
+  text-align: left;
+  line-height: 1.67;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 30px;
+  display: flex;
+}
+.contactus .info p svg {
+  margin-right: 10px;
+  color: #dcdcdc;
+  fill: #dcdcdc;
+}
+.contactus .form {
+  flex: 1.5;
+  padding: 30px 20px 30px 70px;
+  position: relative;
+}
+.contactus .form > p {
+  letter-spacing: 2.13px;
+  text-align: left;
+  color: #181d37;
+  font-weight: 900;
+  max-width: 400px;
+  font-size: 14px;
+  line-height: 27px;
+}
+.form * {
+  box-sizing: border-box;
+}
+.form-Item {
+  position: relative;
+  width: 70%;
+  height: 50px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  max-width: 400px;
+}
+.form-Item input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  outline: none;
+  border: none;
+  color: #181d375f;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 600;
+}
+.form-Item label {
+  position: absolute;
+  left: 0px;
+  border-bottom: 1px solid #181d375f;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  color: #181d375f;
+}
+
+.form-Item label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #3c4572;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
+.form-Item .content-name {
+  position: absolute;
+  left: 0px;
+  bottom: -28px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.form-Item input:focus + .label-name .content-name,
+.form-Item input:valid + .label-name .content-name {
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #3c4572;
+  font-weight: 600;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.form-Item input:focus + .label-name::after,
+.form-Item input:focus + .label-name::after {
+  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+}
+.horizentalTitle.contact {
+  position: absolute;
+  bottom: -30px;
+  left: 80%;
+}
+.contact-btn {
+  outline: none;
+  color: var(--button-color-2);
+  background-color: var(--primery-color);
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 1px;
+  width: 50%;
+  max-width: 350px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.contents.contact {
+  position: relative;
+}
+.social-media {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.social-media svg {
+  fill: #3c4572;
+  font-size: 35px;
+  margin: 0 15px;
+  opacity: 50%;
+}
+.social-media svg:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .contactus {
+        flex-direction: column;
+      }
+    .contactus .info {
+    padding: 30px 30px;
+
+
+  }
+  .horizentalTitle.contact {
+    bottom: 60px;
+    left: 80%;
+  }
+  .social-media {
+    bottom: 20px;
+    right: 40px;
+    max-width: 300px;
+  }
+  .social-media svg {
+   
+  }
+}
+@media screen and (max-width: 786px) {
+    .mainContainer.contact {
+        position: relative;
+      }
+
+ 
+}

@@ -34,6 +34,55 @@
   color: #dcdcdc;
   fill: #dcdcdc;
 }
+.mainContainer.next {
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+}
+.contents {
+  display: flex;
+}
+.next-container {
+  margin: auto 0;
+  width: 87%;
+}
+.next-container .caption {
+  margin-right: 0;
+  padding: 100px 70px 100px 100px;
+  border-radius: 30px 0 0 30px;
+  -webkit-border-radius: 30px 0 0 30px;
+  -moz-border-radius: 30px 0 0 30px;
+  -ms-border-radius: 30px 0 0 30px;
+  -o-border-radius: 30px 0 0 30px;
+  background-color: #3c4572;
+  color: #dcdcdc;
+}
+.next-container .caption h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.next-container .caption p {
+  text-align: left;
+}
+.vertical-text {
+  color: #3c4572;
+  font-weight: 900;
+  opacity: 0.33;
+  letter-spacing: 21px;
+  font-size: 40px;
+  line-height: 7px;
+  text-align: left;
+}
+.contactus .info h1 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.contactus .info .caption {
+  font-weight: 700;
+  line-height: 30px;
+  max-width: 760px;
+}
 .contactus .form {
   flex: 1.5;
   padding: 30px 20px 30px 70px;
@@ -155,7 +204,7 @@
   margin-bottom: 30px;
   cursor: pointer;
 }
-.contents.contact {
+.contents {
   position: relative;
 }
 .social-media {
@@ -167,9 +216,12 @@
   align-items: center;
   justify-content: space-between;
 }
+.social-media a {
+  cursor: pointer;
+}
 .social-media svg {
   fill: #3c4572;
-  font-size: 35px;
+  font-size: 25px;
   margin: 0 15px;
   opacity: 50%;
 }
@@ -178,13 +230,12 @@
 }
 
 @media screen and (max-width: 992px) {
-    .contactus {
-        flex-direction: column;
-      }
-    .contactus .info {
+  .contactus {
+    flex-direction: column;
+  }
+
+  .contactus .info {
     padding: 30px 30px;
-
-
   }
   .horizentalTitle.contact {
     bottom: 60px;
@@ -195,14 +246,20 @@
     right: 40px;
     max-width: 300px;
   }
-  .social-media svg {
-   
-  }
 }
 @media screen and (max-width: 786px) {
-    .mainContainer.contact {
-        position: relative;
-      }
-
- 
+  .mainContainer.contact,
+  .mainContainer.next {
+    position: relative;
+  }
+  .mainContainer.next {
+    min-height: 100vh;
+  }
+  .next-container {
+    margin-top: 50px;
+  }
+  .next-container .caption {
+    margin-right: 0;
+    padding: 50px 70px 50px 50px;
+  }
 }

@@ -12,9 +12,7 @@ p.title.about {
 }
 
 .horizentalTitle {
-  letter-spacing: 21px;
-  margin-bottom: 20px;
-  font-size: 40px;
+ 
   text-orientation: sideways;
   -webkit-text-orientation: sideways;
   writing-mode: vertical-rl;
@@ -23,8 +21,11 @@ p.title.about {
   color: #3c4572;
   font-weight: 900;
   opacity: 0.33;
-  margin-right: -26px;
+  letter-spacing: 21px;
+  font-size: 40px;
   line-height: 7px;
+  margin-bottom: 20px;
+  margin-right: -26px;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);

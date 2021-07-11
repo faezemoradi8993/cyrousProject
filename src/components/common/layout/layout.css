@@ -1,8 +1,15 @@
+
+.minContainer{
+  margin: 0 auto;
+  width: 100vw;
+  max-width: 1100px;
+display: flex;}
 .layoutContainer {
   background-image: url("../../../assets/back.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+background-attachment: fixed;
   display: flex;
   align-items: stretch;
   min-height: 100vh;

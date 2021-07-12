@@ -57,12 +57,19 @@
   align-items: center;
 }
 .sidebar .navbar ul li a span {
-  margin-right: 6px;
+  margin-right: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 27px;
 }
 .sidebar .navbar ul li a.activelink {
   color: #3c4572;
   background-color: #e9ecfb;
 }
+
+.sidebar .navbar ul li a.activelink span svg path{fill:  #3c4572!important;}
+
 .sidebar .navbar ul li a img {
   width: 25px;
   height: 30px;

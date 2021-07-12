@@ -6,7 +6,7 @@ import { LocalPhone, LocationOn, Twitter, Telegram, Instagram } from '@material-
 
 
 const ContactUs = () => {
-  const [status, setStatus] = useState(true);
+  const [status, setStatus] = useState(false);
   // const sendHandle = () => {
 
   //   setStatus(true);

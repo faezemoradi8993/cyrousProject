@@ -19,7 +19,8 @@ const Genealogy = () => {
       <div className="mainContainer">
         <p className="title">Genealogy</p>
         <div className="mainContent">
-          <div className="title-header">
+<div className="tbl-scrull">
+<div className="title-header">
             <span>#</span>
             <span>Name</span>
             <span>Email</span>
@@ -45,6 +46,8 @@ const Genealogy = () => {
               ) : null}
             </div>
           ))}
+</div>
+        
         </div>
         <div className="textContainer">
           <div className="caption">

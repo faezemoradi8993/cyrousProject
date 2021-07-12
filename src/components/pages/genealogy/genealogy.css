@@ -14,6 +14,9 @@ p.title {
   box-shadow: -7px -7px 12px 0 rgba(0, 0, 0, 0.16);
   margin-right: 20px;
 }
+.tbl-scrull{
+  /* overflow-x: scroll; */
+}
 
 .title-header,
 .body-content {
@@ -33,6 +36,7 @@ p.title {
 }
 .body-content span {
   color: #3c4572;
+ 
 }
 .body-content span a {
   color: #3c4572;
@@ -44,6 +48,10 @@ p.title {
   width: 27%;
   font-size: 16px;
   font-weight: 600;
+  margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .title-header span:first-child,
 .body-content span:first-child {
@@ -64,7 +72,7 @@ p.title {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: red;
+  fill: red !important;
   position: relative;
   cursor: pointer;
   top: 10px;

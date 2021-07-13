@@ -3,7 +3,7 @@ import "./pakage.css"
 import CheckIcon from '@material-ui/icons/Check';
 import MainButton from '../../../common/button'
 import image from "../../../../assets/package-1.png"
-const Pakage = ({ backcolor, maincolor, name, month, p1, p2, p3 }) => {
+const Pakage = ({  maincolor, name, month, p1, p2, p3 }) => {
 
     return (
 

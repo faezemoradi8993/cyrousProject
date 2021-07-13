@@ -8,7 +8,7 @@ const Genealogy = () => {
   const [selected, setSelected] = useState({});
   const deleteUser = (user, index) => {
     Users[index].delete = true;
-    setSelected(user);
+    setSelected(selected,user);
     const selectedUser = user.filter((i) => i.id == index + 1);
     selectedUser[0].delete = true;
     setUser(Users);

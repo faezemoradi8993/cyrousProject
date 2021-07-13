@@ -1,4 +1,5 @@
-export default [
+export  default [
+
   { id: 1, name: "ali hamadi", email: "alimoradi@gmail.com", date: "11 sep 2011", delete: false },
   { id: 2, name: "sara homayooni ", email: "mahdimoradi@gmail.com", date: "11 sep 2011", delete: false },
   { id: 3, name: " zahra ahmadi", email: "faezemoosavi@gmail.com", date: "11 sep 2011", delete: false },

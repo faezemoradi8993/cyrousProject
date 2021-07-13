@@ -9,8 +9,9 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 const Sidebar = () => {
   const matches = useMediaQuery('(max-width:768px)');
   const [isOpen, setIsOpen] = useState(false)
-  console.log(matches);
-  const condition = !matches || matches && isOpen;
+  // console.log(matches);
+  const condition = (!matches || matches) && isOpen;
+ console.log(condition);
   const location = useLocation();
   return (
     <>
@@ -19,7 +20,7 @@ const Sidebar = () => {
           <nav className="navbar">
             <ul>
               {links.map(item => <li><Link key={item.id} to={item.to}
-                className={`${location.pathname === item.to ? "activelink" : ""}`}>
+                className={`${location.pathname == item.to ? "activelink" : ""}`}>
                 <span>
                   {/* <img src={item.icon} alt={item.title} /> */}
                   {item.icon}

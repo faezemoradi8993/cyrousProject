@@ -11,8 +11,8 @@ p.title.about {
   text-orientation: sideways;
   -webkit-text-orientation: sideways;
   writing-mode: vertical-rl;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: vertical-rl;
+  -webkit-writing-mode:;
+  -ms-writing-mode:;
   color: #3c4572;
   font-weight: 900;
   opacity: 0.33;

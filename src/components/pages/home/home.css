@@ -21,14 +21,15 @@
 }
 
 .home .center-container .search-container {
-    border-radius        : 30px;
-    height               : 60px;
-    width                : 100%;
+    border-radius: 30px;
+    height: 50px;
+    width: 100%;
     -webkit-border-radius: 30px;
-    -moz-border-radius   : 30px;
-    -ms-border-radius    : 30px;
-    background-color     : rgba(194, 200, 232, 0.6);
-    -o-border-radius     : 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    background-color: rgba(194, 200, 232, 0.6);
+    -o-border-radius: 30px;
+    display: flex;
 }
 
 .home .center-container .search-container input {
@@ -37,7 +38,28 @@
     padding         : 10px 10px;
     background-color: transparent;
     border          : none;
+    color      : #3c4572;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
 
+.home .center-container .search-container input::placeholder{
+     color: #b2b7d2;
+    font-size: 15px;
+    font-weight: 600;
+}
+.home .center-container .search-container span{display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 18px;
+}
+.home .center-container .search-container span path{
+    fill: #b2b7d2;
+
+}
+.home .center-container .search-container input:focus ~ span path {
+    color      : #3c4572;
 }
 
 input:focus {
@@ -80,7 +102,7 @@ input:focus {
 
 .income-overview {
     width                : 100%;
-    height               : 260px;
+    height               : 347px;
     background-color     : #d1d6ef;
     border-radius        : 20px;
     -webkit-border-radius: 20px;
@@ -103,7 +125,7 @@ input:focus {
 
 .yourLink .textContainer .circleTitle {
     width                : 130px;
-    height               : 65%;
+    height               : 70%;
     border-radius        : 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius   : 15px;
@@ -111,21 +133,33 @@ input:focus {
     -o-border-radius     : 15px;
     background-color     : #9fa9d9;
 }
+.yourLink .textContainer .circleTitle p:first-child {
+    margin-top: 11px;
+    opacity: 0.6;
+}
 
 .yourLink .textContainer .circleTitle p:last-child {
     color: #d5d5d5;
-}
+    opacity: 0.8;
+    text-transform: normal!important;
+    font-size: 13px;
+    }
 
-.yourLink .textContainer .caption p,
+.yourLink .textContainer .caption p:first-child,
+.yourLink .textContainer .caption span:first-child {
+    margin-bottom: 15px;
+}
+    .yourLink .textContainer .caption p,
 .yourLink .textContainer .caption span {
     font-size  : 13px;
     font-weight: 900;
     line-height: 15px;
     margin     : 0;
+  
 }
 
 .yourLink .textContainer .caption {
-    padding   : 10px 135px 10px 20px;
+    padding   : 12px 135px 12px 20px;
     box-shadow: none !important;
 }
 
@@ -177,20 +211,19 @@ input:focus {
 }
 
 .profile-container .top-area .image-container {
-    border-radius        : 50%;
+    border-radius: 50%;
     -webkit-border-radius: 50%;
-    -moz-border-radius   : 50%;
-    -ms-border-radius    : 50%;
-    -o-border-radius     : 50%;
-    background-color     : rgb(253, 252, 252);
-    display              : flex;
-    align-items          : center;
-    justify-content      : center;
-    width                : 130px;
-    height               : 130px;
-    position             : relative;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: rgb(253, 252, 252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 110px;
+    position: relative;
     z-index: 2;
- 
 }
 
 .profile-container .top-area .image-container::before {
@@ -221,6 +254,13 @@ input:focus {
     object-position: center;
  
 }
+.profile-container .top-area>p{
+font-size: 20px;
+font-weight: 900;
+color:#3c4572;
+letter-spacing: 1.2px;
+margin: 15px;
+}
 
 .profile-container .icon-bar {
     width          : 100%;
@@ -231,19 +271,21 @@ input:focus {
 }
 
 .profile-container .icon-bar .item {
-    width           : 40px;
-    height          : 40px;
-    margin-right    : 3px;
-    margin-left     : 5px;
-    display         : flex;
-    align-items     : center;
-    justify-content : center;
-    padding         : 3px;
-    box-sizing      : border-box;
-    border-radius   : 14px;
+    width: 40px;
+    height: 40px;
+    margin-right: 3px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    box-sizing: border-box;
+    border-radius: 14px;
     background-color: #b3bdef;
-
-
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
 }
 
 .profile-container .icon-bar .item svg {
@@ -258,19 +300,31 @@ input:focus {
 }
 
 .profile-container .buttom-area .item {
-    border-radius   : 9px;
+    border-radius: 9px;
     background-color: #b3bdef;
-    display         : flex;
-    align-items     : center;
-    justify-content : space-between;
-    padding         : 6px 10px;
-    margin-bottom   : 7px;
-    width           : 100%;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px;
+    margin-bottom: 7px;
+    width: 100%;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
 }
 
 .profile-container .buttom-area .item p {
     margin: 0;
+    color: #4b5aa7c4;
+    font-weight: 600;
+    font-size: 15px;
+}
+.profile-container .buttom-area .item  span {
+    margin: 0;
+    color: #4b5aa7;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 .home .right-container .options-container {
@@ -284,6 +338,98 @@ input:focus {
 
 .home .right-container .options-container .option {
     width: 100%;
+}
+
+.other-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+.other-info-container .info-item{
+    position: relative;
+    width: 100%;
+    margin-bottom: 33px;
+    }
+    .other-info-container .info-item:first-child{
+        margin-top: 20px;
+    }
+.other-info-container .info-item p{
+    padding: 25px 50px 25px 110px;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(194, 200, 232, 0.6);
+    color: #4b5aa7;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.other-info-container .info-item>h5{
+    position: absolute;
+    left: 27px;
+    top: 50%;
+    margin: 0;
+    font-size: large;
+    font-weight: 900;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.other-info-container .circle{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    height: 88px;
+    width: 88px;
+    background-color: #9ba0e1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.other-info-container .circle2{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    height: 70px;
+    width: 70px;
+    background-color: #9ba0e1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    box-shadow: 5px 6px 6px 0 rgba(0, 0, 0, 0.16);
+}
+.other-info-container .circle2 h5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0 0 0 / 6%);
+    margin: 0;
+    font-size: 53px;
+    
 }
 
 @media screen and (max-width: 768px) {

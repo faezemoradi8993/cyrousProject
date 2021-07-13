@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.837" height="36" viewBox="0 0 32.837 36">
+    <defs>
+        <style>
+            .cls-1{fill:#4b5aa7;stroke:#dbdde6;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="bell_1_" transform="translate(-1 1)">
+        <path id="Path_489" d="M31.88 23.96a9.2 9.2 0 0 1-3.668-7.26v-3.95c0-4.985-4.03-9.112-9.251-9.8V1.417a1.547 1.547 0 0 0-3.084 0v1.53c-5.222.691-9.251 4.818-9.251 9.8V16.7a9.206 9.206 0 0 1-3.682 7.272A2.4 2.4 0 0 0 2 25.854a2.6 2.6 0 0 0 2.7 2.479h25.439a2.6 2.6 0 0 0 2.7-2.479 2.408 2.408 0 0 0-.959-1.894z" class="cls-1" transform="translate(0 0)"/>
+        <path id="Path_490" d="M13.531 25.25a5.321 5.321 0 0 0 5.2-4.25H8.326a5.321 5.321 0 0 0 5.205 4.25z" class="cls-1" transform="translate(3.888 8.75)"/>
+    </g>
+</svg>

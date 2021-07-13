@@ -2,8 +2,9 @@
 .minContainer{
   margin: 0 auto;
   width: 100vw;
-  max-width: 1100px;
-display: flex;}
+  max-width: 1700px;
+  display: flex;
+}
 .layoutContainer {
   background-image: url("../../../assets/back.png");
   background-position: center;
@@ -13,6 +14,7 @@ background-attachment: fixed;
   display: flex;
   align-items: stretch;
   min-height: 100vh;
+  /* overflow: hidden; */
 }
 .layoutContainer .sidebar {
   position: -webkit-sticky;
@@ -30,8 +32,13 @@ background-attachment: fixed;
     top: 20px;
     min-height: fit-content !important;
   }
+  .layoutContainer {
+    overflow: hidden;
+  }
 }
 .contents {
   margin-left: 20px;
   width: 100%;
 }
+
+

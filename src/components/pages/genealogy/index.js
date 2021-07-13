@@ -19,44 +19,43 @@ const Genealogy = () => {
       <div className="mainContainer">
         <p className="title">Genealogy</p>
         <div className="mainContent">
-<div className="tbl-scrull">
-<div className="title-header">
-            <span>#</span>
-            <span>Name</span>
-            <span>Email</span>
-            <span>Date</span>
-            <span></span>
-          </div>
-          {user.map((user, index) => (
-            <div className="body-content" key={user.id}>
-              {!user.delete ? (
-                <>
-                  <span>{user.id}</span>
-                  <span>{user.name}</span>
-                  <span>
-                    <a href={"mailto:" + user.email}>{user.email}</a>
-                  </span>
-                  <span>{user.date}</span>
-                  <span>
-                    <DeleteForeverIcon
-                      onClick={() => deleteUser(user, index)}
-                    />
-                  </span>
-                </>
-              ) : null}
+          <div className="tbl-scrull">
+            <div className="title-header">
+              <span>#</span>
+              <span>Name</span>
+              <span>Email</span>
+              <span>Date</span>
+              <span></span>
             </div>
-          ))}
-</div>
-        
+            {user.map((user, index) => (
+              <div className="body-content" key={user.id}>
+                {!user.delete ? (
+                  <>
+                    <span>{user.id}</span>
+                    <span>{user.name}</span>
+                    <span>
+                      <a href={"mailto:" + user.email}>{user.email}</a>
+                    </span>
+                    <span>{user.date}</span>
+                    <span>
+                      <DeleteForeverIcon
+                        onClick={() => deleteUser(user, index)}
+                      />
+                    </span>
+                  </>
+                ) : null}
+              </div>
+            ))}
+          </div>
         </div>
         <div className="textContainer">
           <div className="caption">
-           <p>
-           Your Link :
-            <span>
-              https://cyruscoin.io/?ref=YUlJV2dNcjFRTTZHNTRHZHhtUUNWZz09
-            </span>
-           </p>
+            <p>
+              Your Link :
+              <span>
+                https://cyruscoin.io/?ref=YUlJV2dNcjFRTTZHNTRHZHhtUUNWZz09
+              </span>
+            </p>
           </div>
           <div className="circleTitle">
             <p>45</p>

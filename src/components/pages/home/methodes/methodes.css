@@ -1,0 +1,16 @@
+.methode-container *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.methode-container{
+    width: fit-content;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.methode-container .methode-box{
+  
+}

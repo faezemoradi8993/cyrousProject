@@ -17,6 +17,7 @@ const Sidebar = () => {
     <>
       <ClickAwayListener onClickAway={() => setIsOpen(!isOpen)}>
         <aside className="sidebar">
+       
           <nav className="navbar">
             <ul>
               {links.map(item => <li><Link key={item.id} to={item.to}

@@ -6,6 +6,7 @@ const Exchange = () => {
 
     <Layout>
       <div className="mainContainer">
+      <span id="back-to-top-anchor" />
         <p className="title"> exchange  </p>
       </div>
 

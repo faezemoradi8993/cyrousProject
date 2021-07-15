@@ -17,6 +17,7 @@ const Genealogy = () => {
   return (
     <Layout>
       <div className="mainContainer">
+      <span id="back-to-top-anchor" />
         <p className="title">Genealogy</p>
         <div className="mainContent">
           <div className="tbl-scrull">

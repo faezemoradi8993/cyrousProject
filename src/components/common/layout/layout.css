@@ -40,5 +40,9 @@ background-attachment: fixed;
   margin-left: 20px;
   width: 100%;
 }
+#back-to-top-anchor{
+  width: 0;
+  height: 0;
+}
 
 

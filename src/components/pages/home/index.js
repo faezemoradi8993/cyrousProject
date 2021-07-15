@@ -18,7 +18,7 @@ const Home = () => {
   const lock = <HttpsIcon />;
   return (
     <Layout>
-      <div className="mainContainer home">
+      <div className="mainContainer home"  >
         <div className="center-container">
           <div className="search-container">
             <span>
@@ -53,7 +53,8 @@ const Home = () => {
           </div>
         </div>
         <div className="right-container">
-          <div className="profile-container">
+          <div className="profile-container " >
+          <span id="back-to-top-anchor" />
             {/* top area == avatar , name */}
             <div className="top-area">
               <div className="image-container">

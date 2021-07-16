@@ -6,6 +6,7 @@ const AboutUs = () => {
   return (
     <Layout>
       <div className="mainContainer ">
+      <span id="back-to-top-anchor" />
         <p className="title">About <br />Us</p>
         <div className="aboutus">
           <div className="horizentalTitle"><p>CYRUS</p></div>

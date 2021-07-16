@@ -16,6 +16,7 @@ const ContactUs = () => {
 
       {(status===false) && (
         <div className="mainContainer contact ">
+           <span id="back-to-top-anchor" />
           <p className="title">Contact Us</p>
           <div className="contactus">
             <div class="form">

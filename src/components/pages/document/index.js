@@ -5,6 +5,7 @@ import './document.css'
 const Ducument = () => {
   return (
     <Layout>
+       <span id="back-to-top-anchor" />
     Document
   </Layout>
   )

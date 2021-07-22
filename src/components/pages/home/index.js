@@ -11,7 +11,7 @@ import PersonIcon from "@material-ui/icons/Person";
 import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
 import SecurityOutlinedIcon from "@material-ui/icons/SecurityOutlined";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
-import ArrowDownwardRoundedIcon from "@material-ui/icons/ArrowDownwardRounded";
+import ArrowUpwardRoundedIcon from "@material-ui/icons/ArrowUpwardRounded";
 import HttpsIcon from "@material-ui/icons/Https";
 import Badge from "@material-ui/core/Badge";
 import Collapse from "@material-ui/core/Collapse";
@@ -111,7 +111,7 @@ const Home = () => {
             <Collapse
               in={show}
               style={{
-                transformOrigin: "top",
+                transformOrigin: "center",
                 minWidth: "100%" ,
                  opacity:show? "1":"0" 
               }}
@@ -156,7 +156,7 @@ const Home = () => {
               <Collapse
                 in={show}              
                 style={{
-                  transformOrigin: "top",
+                  transformOrigin: "center",
                   minWidth: "100%" ,
                   opacity:show? "1":"0" 
                 }}
@@ -188,10 +188,10 @@ const Home = () => {
                 </div>
               </Collapse>
               {/* Edit Profile */}
-              <Grow
+              <Zoom
                 in={editProfile}
                 style={{
-                  transformOrigin: "top",
+                  transformOrigin: "center",
                   height: editProfile ? "100%" : "0",
                   opacity:editProfile? "1":"0" 
                 }}
@@ -211,12 +211,12 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </Grow>
+              </Zoom>
               {/* Account Settings */}
-              <Grow
+              <Zoom
                 in={accountSettings}
                 style={{
-                  transformOrigin: "top",
+                  transformOrigin: "center",
                   height: accountSettings ? "100%" : "0",
                   opacity: accountSettings ? "100%" : "0",
                 }}
@@ -248,12 +248,12 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </Grow>
+              </Zoom>
               {/* Security */}
-              <Grow
+              <Zoom
                 in={security}
                 style={{
-                  transformOrigin: "top",
+                  transformOrigin: "center",
                   height: security ? "100%" : "0",
                   opacity: security ? "100%" : "0",
                 }}
@@ -276,16 +276,16 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </Grow>
+              </Zoom>
             </div>
             <Zoom in={!show}>
-              <ArrowDownwardRoundedIcon
+              <ArrowUpwardRoundedIcon
                 onClick={() => backbtn()}
                 style={{
                   position: "absolute",
                   bottom: "10px",
                   left: "10px",
-                  background: "red",
+                  background: "black",
                   fill: "white",
                   borderRadius: "50%",
                   transition: "all 0.4s ease",

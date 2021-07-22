@@ -9,7 +9,7 @@ const Genealogy = () => {
   const deleteUser = (user, index) => {
     Users[index].delete = true;
     setSelected(selected,user);
-    const selectedUser = user.filter((i) => i.id == index + 1);
+    const selectedUser = user.filter((i) => i.id === index + 1);
     selectedUser[0].delete = true;
     setUser(Users);
     console.log(selectedUser[0]);

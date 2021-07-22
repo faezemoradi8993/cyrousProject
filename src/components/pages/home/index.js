@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 import Layout from "../../common/layout";
 import methodesData from "./methodes/peyment-methods.data";
@@ -11,14 +11,52 @@ import PersonIcon from "@material-ui/icons/Person";
 import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
 import SecurityOutlinedIcon from "@material-ui/icons/SecurityOutlined";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
+import ArrowDownwardRoundedIcon from "@material-ui/icons/ArrowDownwardRounded";
 import HttpsIcon from "@material-ui/icons/Https";
 import Badge from "@material-ui/core/Badge";
+import Collapse from "@material-ui/core/Collapse";
+import Grow from "@material-ui/core/Grow";
+import Zoom from "@material-ui/core/Zoom";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const Home = () => {
+  const profileClasses = ["item"];
+  const securityClasses = ["item"];
+  const accountSettingClasses = ["item"];
   const lock = <HttpsIcon />;
+  const [editProfile, setEditProfile] = useState(false);
+  const [accountSettings, setAccountSettings] = useState(false);
+  const [security, setSecurity] = useState(false);
+  const [show, setShow] = useState(true);
+  const backbtn = () => {
+    setShow(true);
+    setEditProfile(false);
+    setAccountSettings(false);
+    setSecurity(false);
+  };
+  const openEditProfile = () => {
+    setShow(false);
+    setEditProfile(true);
+    setAccountSettings(false);
+    setSecurity(false);
+  };
+  const openAccountSettings = () => {
+    setShow(false);
+    setEditProfile(false);
+    setAccountSettings(true);
+    setSecurity(false);
+  };
+  const openSecurity = () => {
+    setShow(false);
+    setEditProfile(false);
+    setAccountSettings(false);
+    setSecurity(true);
+  };
+  const matches = useMediaQuery('(min-width: 768px)');
   return (
+
     <Layout>
-      <div className="mainContainer home"  >
+      <div className="mainContainer home">
         <div className="center-container">
           <div className="search-container">
             <span>
@@ -53,157 +91,232 @@ const Home = () => {
           </div>
         </div>
         <div className="right-container">
-          <div className="profile-container " >
-          <span id="back-to-top-anchor" />
+          <div
+            className="profile-container "
+            style={{
+              height: matches && !show ? "calc(100vh - 80px)" : "500px",
+              transition: "all 1s ease",
+              marginBottom: !show ? "20px" : "0px",
+            }}
+          >
+            <span id="back-to-top-anchor" />
             {/* top area == avatar , name */}
             <div className="top-area">
               <div className="image-container">
-                <img src={userimage} />
+                <img src={userimage} alt="user Image" />
               </div>
               <p>Amir Ebrahimi</p>
             </div>
             {/* icon bar */}
-            <div className="icon-bar">
-              <Badge
-                badgeContent={2}
-                overlap="circular"
-                max="99"
-                color="secondary"
-              >
-                <div className="item">
-                  <BellIcon />
-                </div>
-              </Badge>
-              <Badge
-                badgeContent={8}
-                overlap="circular"
-                max="99"
-                color="secondary"
-              >
-                <div className="item">
-                  <EnvelopeIcon />
-                </div>
-              </Badge>
+            <Collapse
+              in={show}
+              style={{
+                transformOrigin: "0 0 0",
+                minWidth: "100%" ,
+              }}
+              {...(show ? { timeout: 1000 } : {})}
+            >
+              <div className="icon-bar">
+                <Badge
+                  badgeContent={2}
+                  overlap="circular"
+                  max="99"
+                  color="secondary"
+                >
+                  <div className="item">
+                    <BellIcon />
+                  </div>
+                </Badge>
+                <Badge
+                  badgeContent={8}
+                  overlap="circular"
+                  max="99"
+                  color="secondary"
+                >
+                  <div className="item">
+                    <EnvelopeIcon />
+                  </div>
+                </Badge>
 
-              <div className="item">
-                <CalenderIcon />
+                <div className="item">
+                  <CalenderIcon />
+                </div>
               </div>
-            </div>
-            {/* switch bar */}
-            <div className="switch-bar">
-              <p className="item active">Profile</p>
-              <p className="item disabeld">
-                History<span className="lock">{lock}</span>
-              </p>
-            </div>
+              {/* switch bar */}
+              <div className="switch-bar">
+                <p className="item active">Profile</p>
+                <p className="item disabeld">
+                  History<span className="lock">{lock}</span>
+                </p>
+              </div>
+            </Collapse>
             {/* buttom area == edit , setting ,ب security  */}
             <div className="buttom-area">
+              <Collapse
+                in={show}
+                style={{ minWidth: "100%" ,minHeight:show? "fitContent":"unset" }}
+                {...(show ? { timeout: 1000 } : {})}
+              >
+                <div
+                  className={profileClasses}
+                  onClick={() => openEditProfile()}
+                >
+                  <p>Edit Profile</p>
+                  <span>
+                    <PersonIcon />
+                  </span>
+                </div>
+                <div
+                  className={accountSettingClasses}
+                  onClick={() => openAccountSettings()}
+                >
+                  <p>Account Settings</p>
+                  <span>
+                    <SettingsOutlinedIcon />
+                  </span>
+                </div>
+                <div className={securityClasses} onClick={() => openSecurity()}>
+                  <p>Security</p>
+                  <span>
+                    <SecurityOutlinedIcon />
+                  </span>
+                </div>
+              </Collapse>
               {/* Edit Profile */}
-              <div className="item">
-                <p>Edit Profile</p>
-                <span>
-                  <PersonIcon />
-                </span>
-              </div>
-              <div id="edit-profile" className="edit-profile">
-                <div className="item">
-                  <p>Change NickName</p>
-                </div>
-                <div className="item">
-                  <p>Change Profile Picture</p>
-                </div>
-                <div className="item action">
-                  <div className="button-container">
-                    <button className="reset">reset</button>
-                    <button className="save">save</button>
+              <Grow
+                in={editProfile}
+                style={{
+                  transformOrigin: "0 0 0",
+                  height: editProfile ? "100%" : "0",
+                }}
+                {...(editProfile ? { timeout: 1000 } : {})}
+              >
+                <div id="edit-profile" className="edit-profile">
+                  <div className="item">
+                    <p>Change NickName</p>
+                  </div>
+                  <div className="item">
+                    <p>Change Profile Picture</p>
+                  </div>
+                  <div className="item action">
+                    <div className="button-container">
+                      <button className="reset">reset</button>
+                      <button className="save">save</button>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Grow>
               {/* Account Settings */}
-              <div className="item">
-                <p>Account Settings</p>
-                <span>
-                  <SettingsOutlinedIcon />
-                </span>
-              </div>
-              <div id="account-setting" className="account-setting">
-                <div className="item">
-                  <p>Change Password</p>
-                  <div className="input "  >
-<input type="password" id="pass" value="7656745343234" />
+              <Grow
+                in={accountSettings}
+                style={{
+                  transformOrigin: "0 0 0",
+                  height: accountSettings ? "100%" : "0",
+                }}
+                {...(accountSettings ? { timeout: 1000 } : {})}
+              >
+                <div id="account-setting" className="account-setting">
+                  <div className="item">
+                    <p>Change Password</p>
+                    <div className="input ">
+                      <input type="password" id="pass" value="7656745343234" />
+                    </div>
+                  </div>
+                  <div className="item">
+                    <p>Change Email</p>
+                    <div className="input" id="email">
+                      <input type="email" value="faeze.moradi8993@gmail.com" />
+                    </div>
+                  </div>
+                  <div className="item">
+                    <p>Change Phone Number</p>
+                    <div className="input">
+                      <input type="number" value="09123456789" />
+                    </div>
+                  </div>
+                  <div className="item action">
+                    <div className="button-container">
+                      <button className="reset">reset</button>
+                      <button className="save">save</button>
+                    </div>
                   </div>
                 </div>
-                <div className="item">
-                  <p>Change Email</p>
-                  <div className="input" id="email">
-<input type="email"  value="faeze.moradi8993@gmail.com" />
-                  </div>
-                </div>
-                <div className="item">
-                  <p>Change Phone Number</p>
-                  <div className="input">
-<input type="number" value="09123456789" />
-                  </div>
-                </div>
-                <div className="item action">
-                  <div className="button-container">
-                    <button className="reset">reset</button>
-                    <button className="save">save</button>
-                  </div>
-                </div>
-              </div>
+              </Grow>
               {/* Security */}
-              <div className="item">
-                <p>Security</p>
-                <span>
-                  <SecurityOutlinedIcon />
-                </span>
-              </div>
-              <div id="security" className="security">
-                <div className="item">
-                  <p>Authentication</p>
-                </div>
-                <div className="item">
-                  <p>Two-Facktor Authentication</p>
-                </div>
-                <div className="item">
-                  <p>Sms Backup Authentication</p>
-                </div>
-                <div className="item action">
-                  <div className="button-container">
-                    <button className="reset">reset</button>
-                    <button className="save">save</button>
+              <Grow
+                in={security}
+                style={{
+                  transformOrigin: "0 0 0",
+                  height: security ? "100%" : "0",
+                }}
+                {...(security ? { timeout: 1000 } : {})}
+              >
+                <div id="security" className="security">
+                  <div className="item">
+                    <p>Authentication</p>
+                  </div>
+                  <div className="item">
+                    <p>Two-Facktor Authentication</p>
+                  </div>
+                  <div className="item">
+                    <p>Sms Backup Authentication</p>
+                  </div>
+                  <div className="item action">
+                    <div className="button-container">
+                      <button className="reset">reset</button>
+                      <button className="save">save</button>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Grow>
             </div>
+            <Zoom in={!show}>
+              <ArrowDownwardRoundedIcon
+                onClick={() => backbtn()}
+                style={{
+                  position: "absolute",
+                  bottom: "10px",
+                  left: "10px",
+                  background: "red",
+                  fill: "white",
+                  borderRadius: "50%",
+                  transition: "all 0.4s ease",
+                }}
+              />
+            </Zoom>
           </div>
-          <div className="other-info-container">
-            <div className="info-item">
-              <div className="circle"></div>
-              <div className="circle2">
-                <h5>$</h5>
+          <Collapse
+            in={show}
+            style={{ minWidth: show ? "100%" : "100%" }}
+            {...(show ? { timeout: 1000 } : {})}
+          >
+            <div className="other-info-container">
+              <div className="info-item">
+                <div className="circle"></div>
+                <div className="circle2">
+                  <h5>$</h5>
+                </div>
+                <p>COMISSION WALLET</p>
+                <h5>57,421</h5>
               </div>
-              <p>COMISSION WALLET</p>
-              <h5>57,421</h5>
-            </div>
-            <div className="info-item">
-              <div className="circle"></div>
-              <div className="circle2">
-                <h5>$</h5>
+              <div className="info-item">
+                <div className="circle"></div>
+                <div className="circle2">
+                  <h5>$</h5>
+                </div>
+                <p>TOTAL INVESTMENT</p>
+                <h5>125.65</h5>
               </div>
-              <p>TOTAL INVESTMENT</p>
-              <h5>125.65</h5>
-            </div>
-            <div className="info-item">
-              <div className="circle"></div>
-              <div className="circle2">
-                <h5>$</h5>
+              <div className="info-item">
+                <div className="circle"></div>
+                <div className="circle2">
+                  <h5>$</h5>
+                </div>
+                <h5>87.89</h5>
+                <p>PROFIT WALLET</p>
               </div>
-              <h5>87.89</h5>
-              <p>PROFIT WALLET</p>
             </div>
-          </div>
+          </Collapse>
         </div>
       </div>
     </Layout>

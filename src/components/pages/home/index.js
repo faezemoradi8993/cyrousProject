@@ -94,7 +94,7 @@ const Home = () => {
           <div
             className="profile-container "
             style={{
-              height: !show ? "calc(100vh - 85px)" : "500px",
+              height: !show ? "calc(100vh - 120px)" : "500px",
               transition: "all 1s ease",
               marginBottom: !show ? "20px" : "0px",
             }}

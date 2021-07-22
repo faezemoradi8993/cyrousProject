@@ -107,7 +107,7 @@ input:focus {
 .income-overview {
     width                : 100%;
     height               : 347px;
-    background-color: rgba(194, 200, 232, 0.6);
+    background-color     : rgba(194, 200, 232, 0.6);
     border-radius        : 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius   : 20px;
@@ -118,7 +118,7 @@ input:focus {
 
 .yourLink {
     width: 100%;
-   
+
 }
 
 .yourLink .textContainer {
@@ -157,9 +157,10 @@ input:focus {
     margin-bottom: 15px;
 }
 
-.yourLink .textContainer .caption{
+.yourLink .textContainer .caption {
     background-color: rgba(194, 200, 232, 0.6);
 }
+
 .yourLink .textContainer .caption p,
 .yourLink .textContainer .caption span {
     font-size  : 13px;
@@ -198,27 +199,34 @@ input:focus {
 }
 
 .home .right-container .profile-container {
-    width                : 100%;
-    display              : flex;
-    align-items          : center;
-    justify-content      : center;
-    flex-direction       : column;
-    border-radius        : 20px;
-    background-color     : rgba(194, 200, 232, 0.6);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: rgba(194, 200, 232, 0.6);
     -webkit-border-radius: 20px;
-    -moz-border-radius   : 20px;
-    -ms-border-radius    : 20px;
-    -o-border-radius     : 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: relative;
+
 }
 
 .profile-container {
-    padding   : 20px;
+    padding: 20px;
     box-sizing: border-box;
+    transition:all 1s ease ;
+    -webkit-transition:all 1s ease ;
+    -moz-transition:all 1s ease ;
+    -ms-transition:all 1s ease ;
+    -o-transition:all 1s ease ;
 }
 
 .profile-container .top-area {
-    display       : flex;
-    align-items   : center;
+    display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -276,11 +284,13 @@ input:focus {
 }
 
 .profile-container .icon-bar {
-    width          : 100%;
-    display        : flex;
-    align-items    : center;
+    width: 100%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin-bottom  : 30px;
+    margin-bottom: 30px;
+    margin-top: 5px;
+ 
 }
 
 .profile-container .icon-bar .item {
@@ -307,20 +317,20 @@ input:focus {
 }
 
 .switch-bar {
-    display         : flex;
-    align-items     : center;
-    justify-content : space-between;
-    border-radius   : 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 13px;
     background-color: #5f699a18;
-    margin-bottom   : 15px;
-    width           : 100%;
+    margin-bottom: 15px;
+    width: 100%;
 
 }
 
 .switch-bar .item {
     width                : 50%;
     box-sizing           : border-box;
-    padding              : 8px 20px;
+    padding              : 8px 15px;
     border-radius        : 9px;
     color                : #3c4572;
     font-weight          : 700;
@@ -370,9 +380,10 @@ input:focus {
 .edit-profile,
 .account-setting,
 .security {
-    width     : 100%;
-    margin    : 20px 0;
-    /* display: none; */
+    height: 0;
+    width: 100%;
+    /* margin: 20px 0; */
+
 }
 
 
@@ -428,21 +439,23 @@ input:focus {
 }
 
 .profile-container .buttom-area .item {
-    border-radius        : 9px;
-    background-color     : #b3bdef;
-    display              : flex;
-    align-items          : center;
-    justify-content      : space-between;
-    padding              : 6px 10px;
-    margin-bottom        : 7px;
-    width                : 100%;
-    -webkit-border-radius: 9px;
-    -moz-border-radius   : 9px;
-    -ms-border-radius    : 9px;
-    -o-border-radius     : 9px;
-    cursor               : pointer;
-    position             : relative;
+   border-radius: 9px;
+   background-color: #b3bdef;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 6px 10px;
+   margin-bottom: 7px;
+   width: 100%;
+   -webkit-border-radius: 9px;
+   -moz-border-radius: 9px;
+   -ms-border-radius: 9px;
+   -o-border-radius: 9px;
+   cursor: pointer;
+   position: relative;
+
 }
+
 
 .profile-container .buttom-area .item p {
     margin     : 0;
@@ -454,44 +467,49 @@ input:focus {
 
 .profile-container .buttom-area .item span {
     margin     : 0;
-    color      : #4b5aa7;
+    color      : #4b5aa7 !important;
     font-weight: 600;
     font-size  : 15px;
 }
 
-.account-setting .item .input {
-    width: 40%;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform:translateY(-50%) ;
-    background-color: #4b5aa7f5;
-    border-radius: 7px;
-    height: 110%;
-    -webkit-transform:translateY(-50%) ;
-    -moz-transform:translateY(-50%) ;
-    -ms-transform:translateY(-50%) ;
-    -o-transform:translateY(-50%) ;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
+.profile-container .buttom-area .item span svg {
+    fill: #4b5aa7 !important;
 }
-.account-setting .item #email{
+
+.account-setting .item .input {
+    width                : 40%;
+    position             : absolute;
+    right                : 0;
+    top                  : 50%;
+    transform            : translateY(-50%);
+    background-color     : #4b5aa7f5;
+    border-radius        : 7px;
+    height               : 110%;
+    -webkit-transform    : translateY(-50%);
+    -moz-transform       : translateY(-50%);
+    -ms-transform        : translateY(-50%);
+    -o-transform         : translateY(-50%);
+    -webkit-border-radius: 7px;
+    -moz-border-radius   : 7px;
+    -ms-border-radius    : 7px;
+    -o-border-radius     : 7px;
+}
+
+.account-setting .item #email {
     width: 65%;
 }
 
 .account-setting .item .input input {
-    margin-right : 0;
-    height       : 100%;
-    width: 100%;
-    background   : transparent;
-    outline      : none;
-    border       : none;
-    font-size    : 12px;
-    text-align   : center;
-    padding      : 0 7px 0 7px;
-    color        : #ffffff78;
+    margin-right: 0;
+    height      : 100%;
+    width       : 100%;
+    background  : transparent;
+    outline     : none;
+    border      : none;
+    font-size   : 12px;
+    text-align  : center;
+    padding     : 0 7px 0 7px;
+    color       : #ffffff78;
 
 }
 
@@ -608,11 +626,12 @@ input:focus {
 
 }
 
-@media screen and (max-width: 1350px){
-    .account-setting .item .input{
+@media screen and (max-width: 1350px) {
+    .account-setting .item .input {
         width: 35%;
     }
-    .account-setting .item #email{
+
+    .account-setting .item #email {
         width: 50%;
     }
 }
@@ -634,6 +653,7 @@ input:focus {
     .home .center-container {
         margin-right: 0px;
     }
+
     .switch-bar .item {
 
         padding: 5px 10px;
@@ -642,6 +662,7 @@ input:focus {
 
     }
 }
+
 @media screen and (max-width: 768px) {
     .mainContainer.home {
         margin-top   : 65px;
@@ -656,21 +677,29 @@ input:focus {
 
         display: unset !important;
     }
+ 
 }
 
-@media screen and (max-width: 450px){
-    .account-setting .item #email{
+@media screen and (max-width: 475px) {
+    .methods-container {
+     
+        justify-content: space-evenly;
+    }}
+@media screen and (max-width: 450px) {
+    .account-setting .item #email {
         width: 60%;
     }
-    .profile-container .buttom-area .item p {
-font-size: 13px;
-    }
-    
-.other-info-container .info-item p {
-    font-size: 13px;
-}
 
-.other-info-container .info-item>h5 {
-    font-size: 14px;
-}
+
+    .profile-container .buttom-area .item p {
+        font-size: 13px;
+    }
+
+    .other-info-container .info-item p {
+        font-size: 13px;
+    }
+
+    .other-info-container .info-item>h5 {
+        font-size: 14px;
+    }
 }

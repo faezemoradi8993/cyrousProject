@@ -291,8 +291,9 @@
   }
 
   .next-container {
-    /* margin-top: 50px; */
     align-self: center;
+    margin-bottom: 55px;
+    margin-top: 55px;
   }
 
   .next-container .caption {

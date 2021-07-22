@@ -1,4 +1,4 @@
-import React, { useState, setState } from 'react'
+import React, { useState } from 'react'
 import Layout from '../../common/layout'
 import './contactus.css'
 
@@ -14,7 +14,7 @@ const ContactUs = () => {
   return (
     <Layout>
 
-      {(status===false) && (
+      {(status==false) && (
         <div className="mainContainer contact ">
            <span id="back-to-top-anchor" />
           <p className="title">Contact Us</p>
@@ -46,7 +46,7 @@ const ContactUs = () => {
                 </label>
               </div>
               <div className="horizentalTitle contact"><p>CYRUS</p></div>
-              <button className="contact-btn" onclick={() => setStatus(true)}>Send</button>
+              <button className="contact-btn" onClick={() => setStatus(true)}>Send</button>
             </div>
             <div className="info">
               <h2>info</h2>

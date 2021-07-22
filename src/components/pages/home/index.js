@@ -111,7 +111,7 @@ const Home = () => {
             <Collapse
               in={show}
               style={{
-                transformOrigin: "center",
+                transformOrigin: "top",
                 minWidth: "100%" ,
                  opacity:show? "1":"0" 
               }}
@@ -191,7 +191,7 @@ const Home = () => {
               <Zoom
                 in={editProfile}
                 style={{
-                  transformOrigin: "center",
+                  transformOrigin: "top",
                   height: editProfile ? "100%" : "0",
                   opacity:editProfile? "1":"0" 
                 }}
@@ -216,7 +216,7 @@ const Home = () => {
               <Zoom
                 in={accountSettings}
                 style={{
-                  transformOrigin: "center",
+                  transformOrigin: "top",
                   height: accountSettings ? "100%" : "0",
                   opacity: accountSettings ? "100%" : "0",
                 }}
@@ -253,7 +253,7 @@ const Home = () => {
               <Zoom
                 in={security}
                 style={{
-                  transformOrigin: "center",
+                  transformOrigin: "top",
                   height: security ? "100%" : "0",
                   opacity: security ? "100%" : "0",
                 }}

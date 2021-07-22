@@ -188,7 +188,7 @@ const Home = () => {
                 </div>
               </Collapse>
               {/* Edit Profile */}
-              <Zoom
+              <Grow
                 in={editProfile}
                 style={{
                   transformOrigin: "top",
@@ -211,9 +211,9 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </Zoom>
+              </Grow>
               {/* Account Settings */}
-              <Zoom
+              <Grow
                 in={accountSettings}
                 style={{
                   transformOrigin: "top",
@@ -248,9 +248,9 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </Zoom>
+              </Grow>
               {/* Security */}
-              <Zoom
+              <Grow
                 in={security}
                 style={{
                   transformOrigin: "top",
@@ -276,7 +276,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </Zoom>
+              </Grow>
             </div>
             <Zoom in={!show}>
               <ArrowDownwardRoundedIcon

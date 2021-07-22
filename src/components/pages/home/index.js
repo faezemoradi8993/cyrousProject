@@ -94,7 +94,7 @@ const Home = () => {
           <div
             className="profile-container "
             style={{
-              height: matches && !show ? "calc(100vh - 80px)" : "500px",
+              height: matches && !show ? "calc(100vh - 70px)" : "500px",
               transition: "all 1s ease",
               marginBottom: !show ? "20px" : "0px",
             }}
@@ -111,8 +111,9 @@ const Home = () => {
             <Collapse
               in={show}
               style={{
-                transformOrigin: "0 0 0",
+                transformOrigin: "center",
                 minWidth: "100%" ,
+                 opacity:show? "1":"0" 
               }}
               {...(show ? { timeout: 1000 } : {})}
             >
@@ -153,8 +154,12 @@ const Home = () => {
             {/* buttom area == edit , setting ,ب security  */}
             <div className="buttom-area">
               <Collapse
-                in={show}
-                style={{ minWidth: "100%" ,minHeight:show? "fitContent":"unset" }}
+                in={show}              
+                style={{
+                  transformOrigin: "top",
+                  minWidth: "100%" ,
+                  opacity:show? "1":"0" 
+                }}
                 {...(show ? { timeout: 1000 } : {})}
               >
                 <div
@@ -183,11 +188,12 @@ const Home = () => {
                 </div>
               </Collapse>
               {/* Edit Profile */}
-              <Grow
+              <Zoom
                 in={editProfile}
                 style={{
-                  transformOrigin: "0 0 0",
+                  transformOrigin: "center",
                   height: editProfile ? "100%" : "0",
+                  opacity:editProfile? "1":"0" 
                 }}
                 {...(editProfile ? { timeout: 1000 } : {})}
               >
@@ -205,13 +211,14 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </Grow>
+              </Zoom>
               {/* Account Settings */}
-              <Grow
+              <Zoom
                 in={accountSettings}
                 style={{
-                  transformOrigin: "0 0 0",
+                  transformOrigin: "center",
                   height: accountSettings ? "100%" : "0",
+                  opacity: accountSettings ? "100%" : "0",
                 }}
                 {...(accountSettings ? { timeout: 1000 } : {})}
               >
@@ -241,13 +248,14 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </Grow>
+              </Zoom>
               {/* Security */}
-              <Grow
+              <Zoom
                 in={security}
                 style={{
-                  transformOrigin: "0 0 0",
+                  transformOrigin: "center",
                   height: security ? "100%" : "0",
+                  opacity: security ? "100%" : "0",
                 }}
                 {...(security ? { timeout: 1000 } : {})}
               >
@@ -268,7 +276,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </Grow>
+              </Zoom>
             </div>
             <Zoom in={!show}>
               <ArrowDownwardRoundedIcon

@@ -3,6 +3,7 @@ import "./home.css";
 import Layout from "../../common/layout";
 import methodesData from "./methodes/peyment-methods.data";
 import Methode from "./methodes";
+import Chats from "./profile/envelope"
 import userimage from "../../../assets/userimage.png";
 import { ReactComponent as BellIcon } from "../../../assets/bell.svg";
 import { ReactComponent as EnvelopeIcon } from "../../../assets/envelope.svg";
@@ -12,10 +13,12 @@ import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
 import SecurityOutlinedIcon from "@material-ui/icons/SecurityOutlined";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
 import ArrowUpwardRoundedIcon from "@material-ui/icons/ArrowUpwardRounded";
+import CloseIcon from '@material-ui/icons/Close';
 import HttpsIcon from "@material-ui/icons/Https";
 import Badge from "@material-ui/core/Badge";
 import Collapse from "@material-ui/core/Collapse";
 import Grow from "@material-ui/core/Grow";
+import Fade from "@material-ui/core/Fade";
 import Zoom from "@material-ui/core/Zoom";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
@@ -64,7 +67,6 @@ const Home = () => {
     setAccountSettings(false);
     setSecurity(true);
   };
- 
 
   // save change handlers
   const saveChangeProfile = () => {
@@ -86,40 +88,38 @@ const Home = () => {
   const saveChangeAccountSetting = () => {
     const formData = new FormData();
     formData.append("data", userData);
-
   };
   const saveChangeSecurity = () => {
     const formData = new FormData();
     formData.append("data", userData);
-
   };
 
-// profile input handlers
-const passwordChangeHandler=(e)=>{
-const data ={...userData}
-data.password=e.target.value
-setUserData(data)
-}
-const emailChangeHandler=(e)=>{
-  const data ={...userData}
-data.email=e.target.value
-setUserData(data)
-}
-const phoneChangeHandler=(e)=>{
-  const data ={...userData}
-data.phoneNumber=e.target.value
-setUserData(data)
-}
-const handlePictureSelected = (event) => {
-  var picture = event.target.files[0];
-  var src = URL.createObjectURL(picture);
-  const data = { ...userData };
-  data.image = picture;
-  data.imageSrc = src;
-  setUserData(data);
-};
+  // profile input handlers
+  const passwordChangeHandler = (e) => {
+    const data = { ...userData };
+    data.password = e.target.value;
+    setUserData(data);
+  };
+  const emailChangeHandler = (e) => {
+    const data = { ...userData };
+    data.email = e.target.value;
+    setUserData(data);
+  };
+  const phoneChangeHandler = (e) => {
+    const data = { ...userData };
+    data.phoneNumber = e.target.value;
+    setUserData(data);
+  };
+  const handlePictureSelected = (event) => {
+    var picture = event.target.files[0];
+    var src = URL.createObjectURL(picture);
+    const data = { ...userData };
+    data.image = picture;
+    data.imageSrc = src;
+    setUserData(data);
+  };
 
-// show chats
+  // show chats
   const showChatHandler = () => {
     setShow(false);
     setChatShow(true);
@@ -165,7 +165,8 @@ const handlePictureSelected = (event) => {
           <div
             className="profile-container "
             style={{
-              height: !show ? "calc(100vh - 140px)" : "500px",
+              height: !show ? "calc(100% )" : "500px",
+              height: chatShow ? "calc(100% - 100px )" : "500px",
               transition: "all 1s ease",
               marginBottom: !show ? "20px" : "0px",
             }}
@@ -313,7 +314,7 @@ const handlePictureSelected = (event) => {
                       <input
                         type="password"
                         id="pass"
-                        onChange={(e)=>passwordChangeHandler(e)}
+                        onChange={(e) => passwordChangeHandler(e)}
                         value={userData.password}
                       />
                     </div>
@@ -323,7 +324,7 @@ const handlePictureSelected = (event) => {
                     <div className="input" id="email">
                       <input
                         type="email"
-                        onChange={(e)=>emailChangeHandler(e)}
+                        onChange={(e) => emailChangeHandler(e)}
                         value={userData.email}
                       />
                     </div>
@@ -333,7 +334,7 @@ const handlePictureSelected = (event) => {
                     <div className="input">
                       <input
                         type="number"
-                        onChange={(e)=>phoneChangeHandler(e)}
+                        onChange={(e) => phoneChangeHandler(e)}
                         value={userData.phoneNumber}
                       />
                     </div>
@@ -341,7 +342,12 @@ const handlePictureSelected = (event) => {
                   <div className="item action">
                     <div className="button-container">
                       <button className="reset">reset</button>
-                      <button className="save" onClick={saveChangeAccountSetting}>save</button>
+                      <button
+                        className="save"
+                        onClick={saveChangeAccountSetting}
+                      >
+                        save
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -369,7 +375,9 @@ const handlePictureSelected = (event) => {
                   <div className="item action">
                     <div className="button-container">
                       <button className="reset">reset</button>
-                      <button className="save" onClick={saveChangeSecurity}>save</button>
+                      <button className="save" onClick={saveChangeSecurity}>
+                        save
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -385,15 +393,10 @@ const handlePictureSelected = (event) => {
               {...(chatShow ? { timeout: 1000 } : {})}
             >
               <div id="chats" className="chats">
-                <div className="item">
-                  <p>Chat1</p>
-                </div>
-                <div className="item">
-                  <p>Chat2</p>
-                </div>
+<Chats/>
               </div>
             </Zoom>
-            <Zoom in={!show}>
+            <Zoom in={!show && !chatShow}>
               <ArrowUpwardRoundedIcon
                 onClick={() => backbtn()}
                 style={{
@@ -407,6 +410,30 @@ const handlePictureSelected = (event) => {
                 }}
               />
             </Zoom>
+            <Zoom in={chatShow}>
+              <div className="closebtn">
+              <CloseIcon style={{color:"white"}}
+                onClick={() => backbtn()}
+              />
+              </div>
+            
+            </Zoom>
+            <Grow in={chatShow} {...(chatShow ? { timeout: 1000 } : {})}>
+            <div
+            className="top-icon"
+            >
+              <Badge
+                badgeContent={8}
+                overlap="circular"
+                max="99"
+                color="secondary"
+              >
+                <div className="icon-item" onClick={() => showChatHandler()}>
+                  <EnvelopeIcon />
+                </div>
+              </Badge>
+            </div>
+            </Grow>
           </div>
           <Collapse
             in={show}

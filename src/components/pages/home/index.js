@@ -410,14 +410,14 @@ const Home = () => {
                 }}
               />
             </Zoom>
-            <Zoom in={chatShow}>
+            <Grow in={chatShow} {...(chatShow ? { timeout: 1000 } : {})}>
               <div className="closebtn">
               <CloseIcon style={{color:"white"}}
                 onClick={() => backbtn()}
               />
               </div>
             
-            </Zoom>
+            </Grow>
             <Grow in={chatShow} {...(chatShow ? { timeout: 1000 } : {})}>
             <div
             className="top-icon"

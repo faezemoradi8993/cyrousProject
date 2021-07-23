@@ -323,7 +323,7 @@ input:focus {
     -ms-transition    : all 0.4s ease;
     -o-transition     : all 0.4s ease;
 }
-
+.closebtn svg{    fill: white!important;}
 .closebtn {
     position: absolute;
     top: 50px;
@@ -335,7 +335,6 @@ input:focus {
     justify-content: center;
     fill: white!important;
     height: 24px;
-    border: 0 1px solid black;
     border-radius: 8px 0 0 8px;
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;

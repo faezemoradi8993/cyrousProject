@@ -23,9 +23,14 @@
     
     }
     .chats .chat-item p{
-        max-width: 80%;
+        width: 180px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    /* @media screen and (max-width: 992px) {
+    .chats .chat-item p{
+        max-width: 50%;
+     
+    }} */
     

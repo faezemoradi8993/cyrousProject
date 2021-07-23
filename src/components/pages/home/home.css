@@ -272,6 +272,7 @@ input:focus {
     height         : 90%;
     object-fit     : cover;
     object-position: center;
+    border-radius: 50%;
 
 }
 
@@ -394,7 +395,20 @@ input:focus {
     position  : relative;
     margin-top: 60px;
 }
-
+.edit-profile input[type="text"],.edit-profile label{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    outline: none;
+    color      : #4b5aa7c4;
+    font-weight: 600;
+    font-size  : 15px;
+}
+.edit-profile input[type="text"]::placeholder{
+    color      : #4b5aa7c4;
+    font-weight: 600;
+    font-size  : 15px;
+}
 .edit-profile .item.action .button-container,
 .security .item.action .button-container,
 .account-setting .item.action .button-container {
@@ -547,7 +561,7 @@ input:focus {
 }
 
 .other-info-container .info-item p {
-    padding              : 25px 50px 25px 110px;
+    padding              : 25px 30px 25px 100px;
     box-sizing           : border-box;
     margin               : 0;
     text-align           : center;
@@ -691,7 +705,7 @@ input:focus {
     }
 
 
-    .profile-container .buttom-area .item p {
+    .profile-container .buttom-area .item p , .edit-profile input[type="text"], .edit-profile input[type="text"]::placeholder,.edit-profile label{
         font-size: 13px;
     }
 

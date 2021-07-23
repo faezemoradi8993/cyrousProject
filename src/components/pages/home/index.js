@@ -17,7 +17,7 @@ import Badge from "@material-ui/core/Badge";
 import Collapse from "@material-ui/core/Collapse";
 import Grow from "@material-ui/core/Grow";
 import Zoom from "@material-ui/core/Zoom";
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const Home = () => {
   const profileClasses = ["item"];
@@ -28,8 +28,12 @@ const Home = () => {
   const [accountSettings, setAccountSettings] = useState(false);
   const [security, setSecurity] = useState(false);
   const [show, setShow] = useState(true);
+  const [chatShow, setChatShow] = useState(false);
+  const [picture, setPicture] = useState(false);
+  const [src, setSrc] = useState(false);
   const backbtn = () => {
     setShow(true);
+    setChatShow(false);
     setEditProfile(false);
     setAccountSettings(false);
     setSecurity(false);
@@ -52,9 +56,18 @@ const Home = () => {
     setAccountSettings(false);
     setSecurity(true);
   };
-  const matches = useMediaQuery('(min-width: 768px)');
+  const handlePictureSelected = (event) => {
+    var picture = event.target.files[0];
+    var src = URL.createObjectURL(picture);
+    setPicture(picture);
+    setSrc(src);
+  };
+  const showChatHandler = ()=>{
+    setShow(false);
+    setChatShow(true);
+  }
+  const matches = useMediaQuery("(min-width: 768px)");
   return (
-
     <Layout>
       <div className="mainContainer home">
         <div className="center-container">
@@ -103,7 +116,12 @@ const Home = () => {
             {/* top area == avatar , name */}
             <div className="top-area">
               <div className="image-container">
-                <img src={userimage} alt="user Image" />
+                {src ? (
+                  <img src={src} alt="user Image" />
+                ) : (
+                  <img src={userimage} alt="user Image" />
+                )}
+                {/* <img src={userimage} alt="user Image" /> */}
               </div>
               <p>Amir Ebrahimi</p>
             </div>
@@ -112,8 +130,8 @@ const Home = () => {
               in={show}
               style={{
                 transformOrigin: "center",
-                minWidth: "100%" ,
-                 opacity:show? "1":"0" 
+                minWidth: "100%",
+                opacity: show ? "1" : "0",
               }}
               {...(show ? { timeout: 1000 } : {})}
             >
@@ -134,7 +152,7 @@ const Home = () => {
                   max="99"
                   color="secondary"
                 >
-                  <div className="item">
+                  <div className="item" onClick={()=>showChatHandler()}>
                     <EnvelopeIcon />
                   </div>
                 </Badge>
@@ -151,14 +169,14 @@ const Home = () => {
                 </p>
               </div>
             </Collapse>
-            {/* buttom area == edit , setting ,ب security  */}
+            {/* buttom area == edit , setting , security  */}
             <div className="buttom-area">
               <Collapse
-                in={show}              
+                in={show}
                 style={{
                   transformOrigin: "center",
-                  minWidth: "100%" ,
-                  opacity:show? "1":"0" 
+                  minWidth: "100%",
+                  opacity: show ? "1" : "0",
                 }}
                 {...(show ? { timeout: 1000 } : {})}
               >
@@ -193,16 +211,23 @@ const Home = () => {
                 style={{
                   transformOrigin: "center",
                   height: editProfile ? "100%" : "0",
-                  opacity:editProfile? "1":"0" 
+                  opacity: editProfile ? "1" : "0",
                 }}
                 {...(editProfile ? { timeout: 1000 } : {})}
               >
                 <div id="edit-profile" className="edit-profile">
                   <div className="item">
-                    <p>Change NickName</p>
+                    <input type="text" placeholder="Change NickName" />
                   </div>
                   <div className="item">
-                    <p>Change Profile Picture</p>
+                    <input
+                      type="file"
+                      name="uploadfile"
+                      onChange={(event) => handlePictureSelected(event)}
+                      id="img"
+                      style={{ display: "none" }}
+                    />
+                    <label for="img">Change Profile Picture</label>
                   </div>
                   <div className="item action">
                     <div className="button-container">
@@ -278,6 +303,24 @@ const Home = () => {
                 </div>
               </Zoom>
             </div>
+            <Zoom
+                in={chatShow}
+                style={{
+                  transformOrigin: "center",
+                  height: chatShow ? "fit-content" : "0",
+                  opacity: chatShow ? "1" : "0",
+                }}
+                {...(chatShow ? { timeout: 1000 } : {})}
+              >
+                <div id="chats" className="chats">
+                  <div className="item">
+                  <p>Chat1</p>
+                  </div>
+                  <div className="item">
+                  <p>Chat2</p>
+                  </div>
+                </div>
+              </Zoom>
             <Zoom in={!show}>
               <ArrowUpwardRoundedIcon
                 onClick={() => backbtn()}
@@ -294,8 +337,8 @@ const Home = () => {
             </Zoom>
           </div>
           <Collapse
-            in={show}
-            style={{ minWidth: show ? "100%" : "100%" }}
+            in={show }
+            style={{ minWidth: show  ? "100%" : "100%" }}
             {...(show ? { timeout: 1000 } : {})}
           >
             <div className="other-info-container">

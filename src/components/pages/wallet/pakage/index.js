@@ -54,8 +54,8 @@ ${(props) =>
             </Header>
             <div className="divider" style={{ backgroundColor: `${maincolor}` }}></div>
             <div className="content" style={{ color: { maincolor } }}>
-                <h5 style={{ color: `${maincolor}` }}><CheckIcon />Profit <span>{p1}</span></h5>
-                <h5 style={{ color: `${maincolor}` }}><CheckIcon />COMISSION <span>{p2}</span></h5>
+                <h5 style={{ color: `${maincolor}` }}><CheckIcon  />Profit <span>{p1}</span></h5>
+                <h5 style={{ color: `${maincolor}` }}><CheckIcon  />COMISSION <span>{p2}</span></h5>
                 <h5 style={{ color: `${maincolor}` }}><CheckIcon />The amount is <span>{p3}</span></h5>
                 <h5 style={{ color: `${maincolor}` }}>investment </h5>
             </div>

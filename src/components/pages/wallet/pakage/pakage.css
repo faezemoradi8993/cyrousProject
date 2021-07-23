@@ -61,7 +61,7 @@
   height: 148%;
   bottom: 36%;
   left: -55px;
-  background-color: rgb(245, 200, 105);
+  /* background-color: rgb(245, 200, 105); */
   transform: rotate(59deg);
   -webkit-transform: rotate(59deg);
   -moz-transform: rotate(59deg);

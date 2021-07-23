@@ -25,6 +25,14 @@ const Home = () => {
   const accountSettingClasses = ["item"];
   const lock = <HttpsIcon />;
   const [editProfile, setEditProfile] = useState(false);
+  const [userData, setUserData] = useState({
+    name: "Faeze Moradi",
+    password: "54684643515",
+    email: "faeze.moradi8993@gmail.com",
+    phoneNumber: "09123456789",
+    image: false,
+    imageSrc: false,
+  });
   const [accountSettings, setAccountSettings] = useState(false);
   const [security, setSecurity] = useState(false);
   const [show, setShow] = useState(true);
@@ -56,16 +64,66 @@ const Home = () => {
     setAccountSettings(false);
     setSecurity(true);
   };
-  const handlePictureSelected = (event) => {
-    var picture = event.target.files[0];
-    var src = URL.createObjectURL(picture);
-    setPicture(picture);
-    setSrc(src);
+ 
+
+  // save change handlers
+  const saveChangeProfile = () => {
+    const formData = new FormData();
+    formData.append("file", userData);
+    console.log(formData);
+    // $.ajax({
+    //   url: "/some/api/endpoint",
+    //   method: "POST",
+    //   data: formData,
+    //   cache: false,
+    //   contentType: false,
+    //   processData: false,
+    //   success: function(response) {
+    //     // Code to handle a succesful upload
+    //   }
+    // });
   };
-  const showChatHandler = ()=>{
+  const saveChangeAccountSetting = () => {
+    const formData = new FormData();
+    formData.append("data", userData);
+
+  };
+  const saveChangeSecurity = () => {
+    const formData = new FormData();
+    formData.append("data", userData);
+
+  };
+
+// profile input handlers
+const passwordChangeHandler=(e)=>{
+const data ={...userData}
+data.password=e.target.value
+setUserData(data)
+}
+const emailChangeHandler=(e)=>{
+  const data ={...userData}
+data.email=e.target.value
+setUserData(data)
+}
+const phoneChangeHandler=(e)=>{
+  const data ={...userData}
+data.phoneNumber=e.target.value
+setUserData(data)
+}
+const handlePictureSelected = (event) => {
+  var picture = event.target.files[0];
+  var src = URL.createObjectURL(picture);
+  const data = { ...userData };
+  data.image = picture;
+  data.imageSrc = src;
+  setUserData(data);
+};
+
+// show chats
+  const showChatHandler = () => {
     setShow(false);
     setChatShow(true);
-  }
+  };
   const matches = useMediaQuery("(min-width: 768px)");
   return (
     <Layout>
@@ -116,14 +174,13 @@ const Home = () => {
             {/* top area == avatar , name */}
             <div className="top-area">
               <div className="image-container">
-                {src ? (
-                  <img src={src} alt="user Image" />
+                {userData.imageSrc ? (
+                  <img src={userData.imageSrc} alt="user Image" />
                 ) : (
                   <img src={userimage} alt="user Image" />
                 )}
-                {/* <img src={userimage} alt="user Image" /> */}
               </div>
-              <p>Amir Ebrahimi</p>
+              <p>{userData.name}</p>
             </div>
             {/* icon bar */}
             <Collapse
@@ -152,7 +209,7 @@ const Home = () => {
                   max="99"
                   color="secondary"
                 >
-                  <div className="item" onClick={()=>showChatHandler()}>
+                  <div className="item" onClick={() => showChatHandler()}>
                     <EnvelopeIcon />
                   </div>
                 </Badge>
@@ -232,7 +289,9 @@ const Home = () => {
                   <div className="item action">
                     <div className="button-container">
                       <button className="reset">reset</button>
-                      <button className="save">save</button>
+                      <button className="save" onClick={saveChangeProfile}>
+                        save
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -251,25 +310,38 @@ const Home = () => {
                   <div className="item">
                     <p>Change Password</p>
                     <div className="input ">
-                      <input type="password" id="pass" value="7656745343234" />
+                      <input
+                        type="password"
+                        id="pass"
+                        onChange={(e)=>passwordChangeHandler(e)}
+                        value={userData.password}
+                      />
                     </div>
                   </div>
                   <div className="item">
                     <p>Change Email</p>
                     <div className="input" id="email">
-                      <input type="email" value="faeze.moradi8993@gmail.com" />
+                      <input
+                        type="email"
+                        onChange={(e)=>emailChangeHandler(e)}
+                        value={userData.email}
+                      />
                     </div>
                   </div>
                   <div className="item">
                     <p>Change Phone Number</p>
                     <div className="input">
-                      <input type="number" value="09123456789" />
+                      <input
+                        type="number"
+                        onChange={(e)=>phoneChangeHandler(e)}
+                        value={userData.phoneNumber}
+                      />
                     </div>
                   </div>
                   <div className="item action">
                     <div className="button-container">
                       <button className="reset">reset</button>
-                      <button className="save">save</button>
+                      <button className="save" onClick={saveChangeAccountSetting}>save</button>
                     </div>
                   </div>
                 </div>
@@ -297,30 +369,30 @@ const Home = () => {
                   <div className="item action">
                     <div className="button-container">
                       <button className="reset">reset</button>
-                      <button className="save">save</button>
+                      <button className="save" onClick={saveChangeSecurity}>save</button>
                     </div>
                   </div>
                 </div>
               </Zoom>
             </div>
             <Zoom
-                in={chatShow}
-                style={{
-                  transformOrigin: "center",
-                  height: chatShow ? "fit-content" : "0",
-                  opacity: chatShow ? "1" : "0",
-                }}
-                {...(chatShow ? { timeout: 1000 } : {})}
-              >
-                <div id="chats" className="chats">
-                  <div className="item">
+              in={chatShow}
+              style={{
+                transformOrigin: "center",
+                height: chatShow ? "fit-content" : "0",
+                opacity: chatShow ? "1" : "0",
+              }}
+              {...(chatShow ? { timeout: 1000 } : {})}
+            >
+              <div id="chats" className="chats">
+                <div className="item">
                   <p>Chat1</p>
-                  </div>
-                  <div className="item">
-                  <p>Chat2</p>
-                  </div>
                 </div>
-              </Zoom>
+                <div className="item">
+                  <p>Chat2</p>
+                </div>
+              </div>
+            </Zoom>
             <Zoom in={!show}>
               <ArrowUpwardRoundedIcon
                 onClick={() => backbtn()}
@@ -337,8 +409,8 @@ const Home = () => {
             </Zoom>
           </div>
           <Collapse
-            in={show }
-            style={{ minWidth: show  ? "100%" : "100%" }}
+            in={show}
+            style={{ minWidth: show ? "100%" : "100%" }}
             {...(show ? { timeout: 1000 } : {})}
           >
             <div className="other-info-container">

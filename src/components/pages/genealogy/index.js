@@ -19,7 +19,7 @@ const Genealogy = () => {
       <div className="mainContainer">
       <span id="back-to-top-anchor" />
         <p className="title">Genealogy</p>
-        <div className="mainContent">
+        <div className="mainContent geo">
           <div className="tbl-scrull">
             <div className="title-header">
               <span>#</span>

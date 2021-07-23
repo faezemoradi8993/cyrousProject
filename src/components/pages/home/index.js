@@ -166,7 +166,8 @@ const Home = () => {
             className="profile-container "
             style={{
               height: !show ? "calc(100% )" : "500px",
-              height: chatShow ? "calc(100% - 100px )" : "500px",
+              // height: chatShow ? "calc(100% - 100px )" : "500px",
+              height: chatShow ? "calc(100% )" : "500px",
               transition: "all 1s ease",
               marginBottom: !show ? "20px" : "0px",
             }}

@@ -111,6 +111,7 @@ p.title {
   letter-spacing: 0.98px;
 }
 .textContainer .caption p {
+
 }
 .textContainer .circleTitle {
   position: absolute;
@@ -154,6 +155,10 @@ p.title {
 @media screen and (max-width: 786px) {
   .mainContent {
     margin: 0 20px !important;
+    /* max-width: 90vw; */
+  }
+  .mainContent .geo{
+    max-width: 90vw;
   }
   .mainContent.wallet {
     margin-top: 70px !important;

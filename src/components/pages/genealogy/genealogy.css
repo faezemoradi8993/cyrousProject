@@ -5,6 +5,7 @@ p.title {
   color: #3c4572;
   font-weight: 600;
   margin: 20px;
+  align-self: baseline;
 }
 .mainContainer{
   flex-basis: 100%;

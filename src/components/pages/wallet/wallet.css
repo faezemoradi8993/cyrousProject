@@ -17,3 +17,70 @@
 button {
   cursor: pointer;
 }
+
+.mainContainer.wallet * {
+
+  box-sizing: border-box;
+}
+.mainContainer.wallet {
+  display      : flex;
+  margin-left  : -20px;
+  margin-top   : 20px;
+  margin-bottom: 20px;
+
+}
+.wallet .right-container {
+  margin-left   : 10px;
+  width         : 35%;
+  display       : flex;
+  align-items   : center;
+  flex-direction: column;
+  height        : 100%;
+}
+
+.wallet .center-container {
+  margin-right  : 10px;
+  width         : 65%;
+  display       : flex;
+  align-items   : center;
+  flex-direction: column;
+  height        : 100%;
+}
+p.wallet-title {
+  font-size: 30px;
+  color: black;
+  font-weight: 600;
+  margin: 20px;
+  align-self: baseline;
+}
+@media screen and (max-width: 992px) {
+  .mainContainer.wallet {
+      flex-direction: column;
+  }
+
+  .wallet .right-container,
+  .wallet .center-container {
+      width: 100%;
+  }
+
+  .wallet .right-container {
+      margin-left: 0px;
+  }
+
+  .wallet .center-container {
+      margin-right: 0px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .mainContainer.wallet {
+      margin-top   : 65px;
+      margin-left  : 0px;
+      margin-right : 0px;
+      box-sizing   : border-box;
+      padding-left : 20px;
+      padding-right: 20px;
+  }
+
+}

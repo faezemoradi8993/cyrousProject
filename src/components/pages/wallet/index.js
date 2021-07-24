@@ -10,43 +10,49 @@ import WalletManage from "./walletManage"
 import HistoryTitle from "./historyTitle"
 import AddPlan from "./addPlan"
 import Send from "./send"
+import Receive from "./receive"
 const Wallet = () => {
   const [showWallet, setShowWallet] = useState(false);
   const [showSend, setShowSend] = useState(false);
-  const addplan=()=>{
+  const [showReceive, setShowReceive] = useState(false);
+  const addplan = () => {
     setShowWallet(true)
     console.log("wallettrue");
   }
-  const backhandler=()=>{
+  const backhandler = () => {
     setShowWallet(false)
     console.log("walletfalse");
   }
-  const sendhandler=()=>{
+  const sendhandler = () => {
     setShowSend(true)
     console.log("sendtrue");
   }
+  const receivehandler = () => {
+    setShowReceive(true)
+    console.log("receivetrue");
+  }
 
   return (
-  
+
     <Layout>
 
-        {!showWallet&& <div className="mainContainer wallet">
+      {!showWallet && <div className="mainContainer wallet">
         <div className="center-container"> <span id="back-to-top-anchor" />
-        <p className="wallet-title ">Wallet</p>
-        {!showSend&&<WalletManage sendClick={sendhandler}/>}
-        {showSend&&<Send />}
-        <HistoryTitle/>
+          <p className="wallet-title ">Wallet</p>
+        <Zoom><WalletManage receiveClick={receivehandler} sendClick={sendhandler} /></Zoom>  
+          {showSend && <Send />}
+          {showReceive && <Receive />}
+          <HistoryTitle />
         </div>
-        <div className="right-container"> 
-        <AddPlan onClick={addplan} />
+        <div className="right-container">
+          <AddPlan onClick={addplan} />
         </div>
-        </div>}
+      </div>}
       {/* show 3 pakage */}
       {showWallet && (
         <div className="mainContainer ">
           <div className="mainContent wallet ">
             <span id="back-to-top-anchor" />
-
             {packageData.map((p) => (
               <Pakage
                 key={p.id}

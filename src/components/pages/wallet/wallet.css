@@ -1,3 +1,9 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+
+}
 .mainContent.wallet {
   display: flex;
   align-items: center;

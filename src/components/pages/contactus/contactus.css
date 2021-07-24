@@ -246,10 +246,10 @@
 }
 
 .social-media svg {
-  fill     : #3c4572;
+  fill     : #3c45726c!important;
   font-size: 25px;
   margin   : 0 15px;
-  opacity  : 50%;
+
 }
 
 .social-media svg:last-child {

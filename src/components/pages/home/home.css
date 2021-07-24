@@ -199,34 +199,34 @@ input:focus {
 }
 
 .home .right-container .profile-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 20px;
-    background-color: rgba(194, 200, 232, 0.6);
+    width                : 100%;
+    display              : flex;
+    align-items          : center;
+    justify-content      : center;
+    flex-direction       : column;
+    border-radius        : 20px;
+    background-color     : rgba(194, 200, 232, 0.6);
     -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    position: relative;
+    -moz-border-radius   : 20px;
+    -ms-border-radius    : 20px;
+    -o-border-radius     : 20px;
+    position             : relative;
 
 }
 
 .profile-container {
-    padding: 20px;
-    box-sizing: border-box;
-    transition:all 1s ease ;
-    -webkit-transition:all 1s ease ;
-    -moz-transition:all 1s ease ;
-    -ms-transition:all 1s ease ;
-    -o-transition:all 1s ease ;
+    padding           : 20px;
+    box-sizing        : border-box;
+    transition        : all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition   : all 1s ease;
+    -ms-transition    : all 1s ease;
+    -o-transition     : all 1s ease;
 }
 
 .profile-container .top-area {
-    display: flex;
-    align-items: center;
+    display       : flex;
+    align-items   : center;
     flex-direction: column;
 }
 
@@ -272,6 +272,7 @@ input:focus {
     height         : 90%;
     object-fit     : cover;
     object-position: center;
+    border-radius  : 50%;
 
 }
 
@@ -284,13 +285,13 @@ input:focus {
 }
 
 .profile-container .icon-bar {
-    width: 100%;
-    display: flex;
-    align-items: center;
+    width          : 100%;
+    display        : flex;
+    align-items    : center;
     justify-content: center;
-    margin-bottom: 30px;
-    margin-top: 5px;
- 
+    margin-bottom  : 30px;
+    margin-top     : 5px;
+
 }
 
 .profile-container .icon-bar .item {
@@ -311,19 +312,90 @@ input:focus {
     -o-border-radius     : 14px;
 }
 
-.profile-container .icon-bar .item svg {
+.top-icon {
+    position          : absolute;
+    top               : 30px;
+    left              : 20px;
+    margin            : 0;
+    transition        : all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition   : all 0.4s ease;
+    -ms-transition    : all 0.4s ease;
+    -o-transition     : all 0.4s ease;
+}
+.closebtn svg{    fill: white!important;}
+.closebtn {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    background-color: #3c4572;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: white!important;
+    height: 24px;
+    border-radius: 8px 0 0 8px;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-border-radius: 8px 0 0 8px;
+    -moz-border-radius: 8px 0 0 8px;
+    -ms-border-radius: 8px 0 0 8px;
+    -o-border-radius: 8px 0 0 8px;
+}
+.closebtn::after {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 20px;
+    right: -8px;
+    top: 2.2px;
+    background-color: #3c4572;
+    border-radius: 5px;
+    transform:rotate(45deg) ;
+    -webkit-transform:rotate(45deg) ;
+    -moz-transform:rotate(45deg) ;
+    -ms-transform:rotate(45deg) ;
+    -o-transform:rotate(45deg) ;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.icon-item {
+    width                : 60px;
+    height               : 60px;
+    display              : flex;
+    align-items          : center;
+    justify-content      : center;
+    padding              : 3px;
+    box-sizing           : border-box;
+    border-radius        : 14px;
+    background-color     : #b3bdef;
+    -webkit-border-radius: 14px;
+    -moz-border-radius   : 14px;
+    -ms-border-radius    : 14px;
+    -o-border-radius     : 14px;
+}
+
+.profile-container .icon-bar .item svg,
+.icon-item svg {
     width : 60%;
     cursor: pointer;
 }
 
 .switch-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 13px;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    border-radius   : 13px;
     background-color: #5f699a18;
-    margin-bottom: 15px;
-    width: 100%;
+    margin-bottom   : 15px;
+    width           : 100%;
 
 }
 
@@ -350,7 +422,7 @@ input:focus {
 }
 
 .switch-bar .disabeld {
-    opacity         : 17%;
+    opacity         : 25%;
     position        : relative;
     background-color: rgba(203, 205, 232, 0.137);
     cursor          : not-allowed;
@@ -369,7 +441,6 @@ input:focus {
     -o-transform     : translate(50%, -50%);
 }
 
-
 .profile-container .buttom-area {
     width         : 100%;
     display       : flex;
@@ -380,8 +451,8 @@ input:focus {
 .edit-profile,
 .account-setting,
 .security {
-    height: 0;
-    width: 100%;
+    height   : 0;
+    width    : 100%;
     /* margin: 20px 0; */
 
 }
@@ -393,6 +464,23 @@ input:focus {
     height    : 30px;
     position  : relative;
     margin-top: 60px;
+}
+
+.edit-profile input[type="text"],
+.edit-profile label {
+    background-color: transparent;
+    border          : none;
+    width           : 100%;
+    outline         : none;
+    color           : #4b5aa7c4;
+    font-weight     : 600;
+    font-size       : 15px;
+}
+
+.edit-profile input[type="text"]::placeholder {
+    color      : #4b5aa7c4;
+    font-weight: 600;
+    font-size  : 15px;
 }
 
 .edit-profile .item.action .button-container,
@@ -439,20 +527,20 @@ input:focus {
 }
 
 .profile-container .buttom-area .item {
-   border-radius: 9px;
-   background-color: #b3bdef;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding: 6px 10px;
-   margin-bottom: 7px;
-   width: 100%;
-   -webkit-border-radius: 9px;
-   -moz-border-radius: 9px;
-   -ms-border-radius: 9px;
-   -o-border-radius: 9px;
-   cursor: pointer;
-   position: relative;
+    border-radius        : 9px;
+    background-color     : #b3bdef;
+    display              : flex;
+    align-items          : center;
+    justify-content      : space-between;
+    padding              : 6px 10px;
+    margin-bottom        : 7px;
+    width                : 100%;
+    -webkit-border-radius: 9px;
+    -moz-border-radius   : 9px;
+    -ms-border-radius    : 9px;
+    -o-border-radius     : 9px;
+    cursor               : pointer;
+    position             : relative;
 
 }
 
@@ -547,7 +635,7 @@ input:focus {
 }
 
 .other-info-container .info-item p {
-    padding              : 25px 50px 25px 110px;
+    padding              : 25px 30px 25px 100px;
     box-sizing           : border-box;
     margin               : 0;
     text-align           : center;
@@ -677,21 +765,26 @@ input:focus {
 
         display: unset !important;
     }
- 
+
 }
 
 @media screen and (max-width: 475px) {
     .methods-container {
-     
+
         justify-content: space-evenly;
-    }}
+    }
+}
+
 @media screen and (max-width: 450px) {
     .account-setting .item #email {
         width: 60%;
     }
 
 
-    .profile-container .buttom-area .item p {
+    .profile-container .buttom-area .item p,
+    .edit-profile input[type="text"],
+    .edit-profile input[type="text"]::placeholder,
+    .edit-profile label {
         font-size: 13px;
     }
 

@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import Layout from "../../common/layout";
 import "./wallet.css";
@@ -28,6 +29,7 @@ const Wallet = () => {
   return (
   
     <Layout>
+
         {!showWallet&& <div className="mainContainer wallet">
         <div className="center-container"> <span id="back-to-top-anchor" />
         <p className="wallet-title ">Wallet</p>
@@ -61,8 +63,6 @@ const Wallet = () => {
             <div className="leftButton">
               <MainButton title="Back" cliked={backhandler} />
             </div>
-
-
           </div>
         </div>
       )}

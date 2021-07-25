@@ -12,7 +12,12 @@
     padding: 40px 20px;
     box-sizing: border-box;
     transition: all 0.4s ease;
-    /* height: 250px; */
+    /*height: 250px;
+     */
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
 }
 
 .wallet-manage .content {
@@ -53,6 +58,7 @@ width: 180px;}
 
 .wallet-manage .actions .send {
     border-radius: 30px;
+    width: 100%;
     background-color: #5162bb;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -68,7 +74,7 @@ width: 180px;}
 }
 
 .wallet-manage .actions .resive {
-   
+    width: 100%;
     box-sizing: border-box;
     border-radius: 30px;
     background-color: transparent;

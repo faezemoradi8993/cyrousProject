@@ -11,8 +11,8 @@ const index = () => {
         <p>0xE61013558B4ABB180ae77557adF6a83d4cCFfcF0</p>
       </div>
       <div className="copy-container">
-        <FileCopyOutlinedIcon />
-        <p>Copy</p>
+        <FileCopyOutlinedIcon style={{padding:"5px 0", width:"40px" , height:"25px"}} />
+        <p >Copy</p>
       </div>
     {/* </div> */}
     </>

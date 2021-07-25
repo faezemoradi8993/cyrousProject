@@ -2,7 +2,8 @@ import React from 'react'
 import "./walletManage.css"
 const index = ({sendClick , receiveClick}) => {
     return (
-        <div className="wallet-manage">
+        // <div className="wallet-manage">
+        <>
             <div className="content">
                 <p className="head">YOUR BALANCE</p>
                 <h1 className="balance"><span>40</span>CYRUS</h1>
@@ -12,8 +13,8 @@ const index = ({sendClick , receiveClick}) => {
     <button onClick={sendClick} className="send">Send</button>
     <button onClick={receiveClick} className="resive">Recive</button>
 </div>
-            
-        </div>
+         </>  
+        // </div>
     )
 }
 

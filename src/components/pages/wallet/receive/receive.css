@@ -4,9 +4,19 @@
   flex-direction: column;
   border-radius: 30px;
   background-color: rgba(194, 200, 232, 0.6);
-  width: 100%;
+  width: 85%;
   box-sizing: border-box;
   padding: 20px;
+  position: relative;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
 .recive-manager>div {
   margin-top: 15px;
@@ -24,15 +34,20 @@
   background-color: #d1d6ef;
   box-sizing: border-box;
   padding: 5px 10px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
 }
 .recive-manager .code p {
-  width: 100%;
+  max-width: 100%;
   text-align: center;
-  letter-spacing: 0.67px;
+
   text-align: right;
   color: #5162bb;
   font-size: 13px;
   font-weight: 600;
+  min-width: 80%;
 }
 .copy-container {
   display: flex;
@@ -44,3 +59,11 @@ border-radius: 30px;}
 .copy-container svg path{ fill: #d1d6ef!important;}
 .copy-container p{color: #5162bb;
 margin-top: 5px;}
+@media screen and (max-width: 560px) {
+  .recive-manager {width: 100%;}
+  .recive-manager .code p {
+  
+    font-size: 9px;
+  
+  }
+}

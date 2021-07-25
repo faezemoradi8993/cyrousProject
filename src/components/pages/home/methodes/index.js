@@ -167,15 +167,15 @@ const index = ({ type, price }) => {
     <MethodeContainer>
       {
         <MethodeBox {...type}>
-           <Package>Package</Package>
-           <Title>CYRUS</Title>
+          <Package>Package</Package>
+          <Title>CYRUS</Title>
           <Price>{price}</Price>
           <Shadow></Shadow>
           <Line1></Line1>
           <Line2></Line2>
           <Line3></Line3>
-         
-          <Image/>
+
+          <Image />
         </MethodeBox>
       }
 

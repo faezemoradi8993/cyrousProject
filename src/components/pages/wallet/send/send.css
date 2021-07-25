@@ -1,17 +1,23 @@
 .send-manage {
-    border-radius        : 30px;
-    background-color     : rgba(194, 200, 232, 0.6);
-    width                : 85%;
-    align-self           : center;
-    display              : flex;
-    align-items          : center;
-    flex-direction       : column;
-    padding              : 20px 60px 20px 10px;
-    box-sizing           : border-box;
-    -webkit-border-radius: ;
-    -moz-border-radius   : ;
-    -ms-border-radius    : ;
-    -o-border-radius     : ;
+    position: relative;
+    border-radius: 30px;
+    background-color: rgba(194, 200, 232, 0.6);
+    width: 85%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 60px 20px 10px;
+    box-sizing: border-box;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
 }
 
 .sendbtn-container {

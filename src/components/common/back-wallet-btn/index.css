@@ -1,0 +1,46 @@
+.closebtn-wallet svg {
+  font-size: 15px;
+  fill: white !important;
+}
+.closebtn-wallet {
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  background-color: #5162bb;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: white !important;
+  height: 20px;
+  border-radius: 0 8px 8px 0;
+  transition: all 0.4s ease;
+  -webkit-transition: ;
+  -moz-transition: ;
+  -ms-transition: ;
+  -o-transition: ;
+  -webkit-border-radius: 0 8px 8px 0;
+  -moz-border-radius: 0 8px 8px 0;
+  -ms-border-radius: 0 8px 8px 0;
+  -o-border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+.closebtn-wallet::after {
+  content: "";
+  position: absolute;
+  width: 16.4px;
+  height: 16.6px;
+  left: -6px;
+  top: 1px;
+  background-color: #5162bb;
+  border-radius: 5px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}

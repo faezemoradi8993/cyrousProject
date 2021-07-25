@@ -3,7 +3,8 @@ import "./send.css";
 import MainButton from "./../../../common/button/index";
 const index = () => {
   return (
-    <div className="send-manage">
+    // <div className="send-manage">
+    <>
       <div className="content">
         <div className="item-container">
           <div id="cyrus"  className="item1">
@@ -40,7 +41,8 @@ const index = () => {
       <MainButton title="send" 
        clicked={() => console.log("sent")} />
        </div>
-    </div>
+    {/* </div> */}
+    </>
   );
 };
 

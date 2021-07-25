@@ -11,24 +11,33 @@ import HistoryTitle from "./historyTitle"
 import AddPlan from "./addPlan"
 import Send from "./send"
 import Receive from "./receive"
+import GoBack from "../../common/back-wallet-btn"
 const Wallet = () => {
   const [showWallet, setShowWallet] = useState(false);
+  const [showWalletMannage, setShowWalletMannage] = useState(true);
   const [showSend, setShowSend] = useState(false);
   const [showReceive, setShowReceive] = useState(false);
   const addplan = () => {
     setShowWallet(true)
     console.log("wallettrue");
   }
+  const goback = () => {
+    setShowWalletMannage(true)
+    setShowSend(false)
+    setShowReceive(false)
+  };
   const backhandler = () => {
     setShowWallet(false)
     console.log("walletfalse");
   }
   const sendhandler = () => {
     setShowSend(true)
+    setShowWalletMannage(false)
     console.log("sendtrue");
   }
   const receivehandler = () => {
     setShowReceive(true)
+    setShowWalletMannage(false)
     console.log("receivetrue");
   }
 
@@ -39,9 +48,12 @@ const Wallet = () => {
       {!showWallet && <div className="mainContainer wallet">
         <div className="center-container"> <span id="back-to-top-anchor" />
           <p className="wallet-title ">Wallet</p>
-        <Zoom><WalletManage receiveClick={receivehandler} sendClick={sendhandler} /></Zoom>  
-          {showSend && <Send />}
-          {showReceive && <Receive />}
+          <div className={showWalletMannage ? 'wallet-manage' : showSend ? 'send-manage' : showReceive ? 'recive-manager' : ""}>
+            {(showSend || showReceive) && <GoBack clicked={goback} />}
+            {showWalletMannage && <WalletManage receiveClick={receivehandler} sendClick={sendhandler} />}
+            {showSend && <Send />}
+            {showReceive && <Receive />}
+          </div>
           <HistoryTitle />
         </div>
         <div className="right-container">

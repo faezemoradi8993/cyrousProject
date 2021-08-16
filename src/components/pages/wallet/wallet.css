@@ -27,7 +27,7 @@ button {
 
 .mainContainer.wallet * {
 
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 .mainContainer.wallet {
   display      : flex;
